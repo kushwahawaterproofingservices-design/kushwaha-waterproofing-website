@@ -78,6 +78,21 @@
 .hero-slide:first-child .slide-copy {
   display: none;
 }
+  /* Mobile banner fix */
+@media (max-width: 650px) {
+  .hero-slides {
+    min-height: 0;
+  }
+
+  .hero-slide img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .slider-dots {
+    bottom: 10px;
+  }
+}
   </style>
 </head>
 <body>
