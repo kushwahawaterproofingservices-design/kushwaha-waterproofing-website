@@ -60,11 +60,11 @@
     .hero-slider{position:relative;background:#062b5a;overflow:hidden}
     /* Keep the hero banner a controlled size on laptop/desktop instead of letting
        the source image's natural height take over the whole screen. */
-    .hero-slides{position:relative;height:clamp(320px, 40vw, 500px);min-height:0}
-    .hero-slide{position:absolute;inset:0;width:100%;height:100%;opacity:0;visibility:hidden;transition:opacity .8s ease;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-slides{position:relative;width:100%;aspect-ratio:16/7.5;height:auto;min-height:0;max-height:600px}
+    .hero-slide{position:absolute;inset:0;width:100%;height:100%;opacity:0;visibility:hidden;transition:opacity .8s ease;display:flex;align-items:center;justify-content:center;overflow:hidden;border:0;outline:0}
     .hero-slide.active{opacity:1;visibility:visible;position:absolute}
-    .hero-slide img{width:100%;height:100%;object-fit:contain;display:block;background:#062b5a}
-    .hero-slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,27,61,.34),transparent 75%);pointer-events:none}
+    .hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;background:#062b5a;border:0;outline:0}
+    .hero-slide:after{display:none}
     .slide-copy{position:absolute;z-index:2;left:max(4%,calc((100% - 1160px)/2));bottom:14%;max-width:min(570px,75%);color:#fff;text-shadow:0 2px 12px #00152b88}
     .slide-copy h1{font-size:clamp(26px,4.2vw,52px);line-height:1.05;color:#fff;margin:0 0 12px;letter-spacing:-.8px}
     .slide-copy p{font-size:clamp(13px,1.5vw,18px);margin:0 0 18px;color:#eef8ff;max-width:560px}
@@ -75,7 +75,7 @@
     .slider-dot{width:10px;height:10px;padding:0;border:1px solid white;border-radius:50%;background:#ffffff80;cursor:pointer}.slider-dot.active{background:#fff;transform:scale(1.25)}
     .all-types{background:linear-gradient(110deg,#082f62,#1475b8);color:white;padding:22px 0}.all-types .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.all-types strong{font-size:clamp(18px,2.2vw,25px)}.all-types p{margin:4px 0 0;color:#e2f4ff;font-size:14px}
     .photo-carousel{position:relative;overflow:hidden}.gallery-grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin;scroll-behavior:smooth}.gallery-item{flex:0 0 clamp(245px,30%,340px);scroll-snap-align:start}.gallery-item img{width:100%;height:220px;object-fit:cover;display:block}.gallery-controls{display:flex;justify-content:center;gap:10px;margin-top:10px}.gallery-controls button{border:1px solid #c7d9ec;background:#fff;color:#0d3b78;border-radius:50%;width:42px;height:42px;font-size:22px;cursor:pointer}
-    @media(max-width:650px){.hero-slides{height:clamp(220px, 58vw, 340px)}.slide-copy{left:18px;bottom:15%;max-width:82%}.slide-copy h1{font-size:25px}.slide-copy p{font-size:12px;line-height:1.45;margin-bottom:12px}.slide-copy .btn{padding:9px 12px;font-size:12px}.slider-arrow{width:34px;height:34px;font-size:20px}.slider-arrow.prev{left:8px}.slider-arrow.next{right:8px}.slider-dots{bottom:10px}.gallery-item{flex-basis:82%}.gallery-item img{height:195px}.hero-slide img{object-position:center}.all-types .btn{width:100%}}
+    @media(max-width:650px){.hero-slides{aspect-ratio:16/9;height:auto;max-height:none}.slide-copy{left:18px;bottom:15%;max-width:82%}.slide-copy h1{font-size:25px}.slide-copy p{font-size:12px;line-height:1.45;margin-bottom:12px}.slide-copy .btn{padding:9px 12px;font-size:12px}.slider-arrow{width:34px;height:34px;font-size:20px}.slider-arrow.prev{left:8px}.slider-arrow.next{right:8px}.slider-dots{bottom:10px}.gallery-item{flex-basis:82%}.gallery-item img{height:195px}.hero-slide img{object-position:center;width:100%;height:100%;object-fit:cover}.all-types .btn{width:100%}}
     @media(prefers-reduced-motion:reduce){.hero-slide,.gallery-grid{transition:none;scroll-behavior:auto}}
 .hero-slide:first-child .slide-copy {
   display: none;
@@ -86,13 +86,18 @@
   .hero-slides { min-height: 0; }
   .hero-slide { position: absolute; }
   .hero-slide.active { position: absolute; }
-  .hero-slide img { width: 100%; height: 100%; object-fit: contain; }
+  .hero-slide img { width: 100%; height: 100%; object-fit: cover; border: 0; outline: 0; }
   .slider-dots { bottom: 10px; }
 }
+
+    .floating-contact{position:fixed;right:22px;bottom:24px;z-index:100;display:flex;flex-direction:column;gap:10px}
+    .floating-contact a{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 4px 16px #00152b40;border:2px solid #fff;text-decoration:none}
+    .floating-contact .float-whatsapp{background:#16a34a}.floating-contact .float-call{background:#0b3b70}
+    @media(max-width:560px){.floating-contact{right:10px;bottom:82px;gap:8px}.floating-contact a{width:46px;height:46px}}
   </style>
 </head>
 <body>
-  <div class="topbar"><div class="wrap"><span>☎ <a href="tel:+919888828636">98888 28636</a> &nbsp; · &nbsp; ✉ <a href="mailto:kushwahawaterproofingservices@gmail.com">kushwahawaterproofingservices@gmail.com</a></span><span>Chandigarh · Mohali · Panchkula</span></div></div>
+  <div class="topbar"><div class="wrap"><span>☎ <a href="tel:+919888828636">98888 28636</a> <a class="top-whatsapp" href="https://wa.me/919888828636" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 98888 28636" title="WhatsApp" style="display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:#16a34a;color:#fff;margin:0 5px"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.1 0C5.56 0 .24 5.32.24 11.86c0 2.09.55 4.13 1.59 5.93L.14 24l6.37-1.67a11.86 11.86 0 0 0 5.58 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.44-8.41ZM12.1 21.73h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.83 9.83 0 0 1-1.51-5.21C2.2 6.42 6.66 1.96 12.1 1.96c2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.97c0 5.44-4.42 9.91-9.84 9.91Z"/></svg></a> &nbsp; · &nbsp; ✉ <a href="mailto:kushwahawaterproofingservices@gmail.com">kushwahawaterproofingservices@gmail.com</a></span><span>Chandigarh · Mohali · Panchkula</span></div></div>
   <header>
     <div class="wrap nav">
       <a class="brand" href="#home" aria-label="Kushwaha Waterproofing Services home">
@@ -106,8 +111,8 @@
     <section class="hero-slider" aria-label="Kushwaha Waterproofing Services featured banners">
       <div class="hero-slides" id="heroSlides">
         <article class="hero-slide active">
-          <img src="assets/home-banner-design-2.png" alt="Kushwaha Waterproofing Services blue promotional banner with roof waterproofing worker" fetchpriority="high">
-          <div class="slide-copy"><span class="eyebrow">All Types of Waterproofing Work</span><h1>Protect Your Property. Keep Water Out.</h1><p>Professional waterproofing solutions for homes, commercial buildings and industrial properties across Chandigarh, Mohali and Panchkula.</p><a class="btn cyan" href="services.html">Explore All Services →</a></div>
+          <img src="assets/kushwaha-promotional-poster.jpg" alt="Kushwaha Waterproofing Services blue promotional banner with roof waterproofing worker" fetchpriority="high" loading="eager">
+          
         </article>
         <article class="hero-slide">
           <img src="assets/roof-waterproofing-surface-preparation.png" alt="Roof surface preparation before waterproofing treatment" loading="lazy">
@@ -204,6 +209,11 @@
     </section>
   </main>
   <footer><div class="wrap foot"><div><strong>Kushwaha Waterproofing Services</strong><small>YOUR HOME FOR A BETTER TOMORROW</small></div><div>Roof • Terrace • PU Coating • Injection Grouting</div><div>© <span id="year"></span> Kushwaha Waterproofing Services</div></div></footer>
+
+  <div class="floating-contact" aria-label="Quick contact buttons">
+    <a class="float-whatsapp" href="https://wa.me/919888828636" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.1 0C5.56 0 .24 5.32.24 11.86c0 2.09.55 4.13 1.59 5.93L.14 24l6.37-1.67a11.86 11.86 0 0 0 5.58 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.44-8.41ZM12.1 21.73h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.83 9.83 0 0 1-1.51-5.21C2.2 6.42 6.66 1.96 12.1 1.96c2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.97c0 5.44-4.42 9.91-9.84 9.91Z"/></svg></a>
+    <a class="float-call" href="tel:+919888828636" aria-label="Call Kushwaha Waterproofing Services" title="Call Now"><svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02l-2.19 2.2Z"/></svg></a>
+  </div>
   <div class="mobile-cta"><a class="btn alt" href="#services">Services</a><a class="btn" href="#contact">Enquire Now</a></div>
   <script>
 
