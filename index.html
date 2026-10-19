@@ -194,6 +194,41 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 @media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.hero-slide img{object-fit:contain!important}.hero-slide .slide-copy{left:12px!important;bottom:34px!important;max-width:78%!important;padding:10px!important}.hero-slide .slide-copy h1{font-size:clamp(18px,5vw,26px)!important;margin:5px 0 6px!important}.hero-slide .slide-copy p{font-size:12px!important;margin-bottom:8px!important}.hero-slide .slide-copy .btn{font-size:12px!important;padding:8px 10px!important}.slider-dots{bottom:8px!important}}
 
 </style>
+
+<style id="original-photo-slider-fix">
+/* Use the original site photos only: no blurred side-fill, no crop, no text over photos. */
+.hero-slider{background:#f4f6f8!important;overflow:hidden!important;padding:0!important;margin:0!important}
+.hero-slides{position:relative!important;width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;background:#f4f6f8!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .45s ease!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+.hero-slide img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;background:#f4f6f8!important;filter:none!important;transform:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important}
+.hero-slide .slide-copy{display:none!important}
+.slider-arrow{z-index:5!important}
+.slider-dots{z-index:5!important;bottom:10px!important}
+.slide-details{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:20px clamp(16px,4vw,48px);background:#fff;border-bottom:1px solid #dce5ee}
+.slide-details-copy{min-width:0;flex:1 1 260px}
+.slide-details h2{margin:0 0 6px;color:#103b70;font-size:clamp(20px,2.4vw,30px);line-height:1.2}
+.slide-details p{margin:0;color:#43566b;font-size:clamp(14px,1.5vw,17px);line-height:1.5}
+.slide-details .btn{flex:0 0 auto;background:#087dbb!important;color:#fff!important;border:1px solid #087dbb!important;padding:12px 22px!important;font-weight:800}
+@media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.slide-details{padding:16px;gap:12px}.slide-details .btn{width:100%;text-align:center;justify-content:center}.slider-arrow{width:34px!important;height:34px!important;font-size:22px!important}.slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}}
+
+/* Final hero slider fixes: use original full-width photos, no blurred side copies */
+.hero-slider{background:#062b5a!important;overflow:hidden!important}
+.hero-slides{position:relative!important;width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;background:#062b5a!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;opacity:0;visibility:hidden;overflow:hidden!important;background:#062b5a!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important}
+.hero-slide img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important;background:#062b5a!important;filter:none!important;transform:none!important;box-shadow:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important;background:none!important;filter:none!important}
+.hero-slide .slide-copy{display:none!important}
+.slide-details{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;flex-wrap:wrap!important;padding:20px clamp(16px,4vw,48px)!important;background:#fff!important;border-bottom:1px solid #dce5ee!important}
+.slide-details-copy{min-width:0!important;flex:1 1 260px!important}
+.slide-details h2{margin:0 0 6px!important;color:#103b70!important;font-size:clamp(20px,2.4vw,30px)!important;line-height:1.2!important}
+.slide-details p{margin:0!important;color:#43566b!important;font-size:clamp(14px,1.5vw,17px)!important;line-height:1.5!important}
+.slide-details .btn{flex:0 0 auto!important;background:#087dbb!important;color:#fff!important;border:1px solid #087dbb!important;padding:12px 22px!important;font-weight:800!important}
+@media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.slide-details{padding:16px!important;gap:12px!important}.slide-details .btn{width:100%!important;text-align:center!important;justify-content:center!important}.slider-arrow{width:34px!important;height:34px!important;font-size:22px!important}.slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}}
+</style>
+
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>☎ <a aria-label="WhatsApp 98888 28636" class="top-whatsapp" href="https://wa.me/919888828636" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;width:21px;height:21px;border-radius:50%;background:#25D366;color:#fff;margin:0 5px 0 2px" target="_blank" title="WhatsApp"><svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><path d="M12.04 2.1a9.75 9.75 0 0 0-8.4 14.7L2.3 21.7l5.05-1.32A9.8 9.8 0 1 0 12.04 2.1Zm0 17.7a7.9 7.9 0 0 1-4.02-1.1l-.29-.17-2.99.78.8-2.91-.19-.3a7.88 7.88 0 1 1 6.69 3.7Zm4.33-5.9c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.52.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" fill="#fff"></path></svg></a> <a href="tel:+919888828636">98888 28636</a>   ·   ✉ <a href="mailto:kushwahawaterproofingservices@gmail.com">kushwahawaterproofingservices@gmail.com</a></span><span>Chandigarh · Mohali · Panchkula</span></div></div>
@@ -229,6 +264,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 </article>
 <button aria-label="Previous banner" class="slider-arrow prev" id="heroPrev" type="button">‹</button><button aria-label="Next banner" class="slider-arrow next" id="heroNext" type="button">›</button>
 <div aria-label="Choose banner" class="slider-dots" id="heroDots"><button aria-label="Banner 1" class="slider-dot active"></button><button aria-label="Banner 2" class="slider-dot"></button><button aria-label="Banner 3" class="slider-dot"></button><button aria-label="Banner 4" class="slider-dot"></button><button aria-label="Banner 5" class="slider-dot"></button><button aria-label="Banner 6" class="slider-dot"></button></div>
+</div>
+<div class="slide-details" id="slideDetails" aria-live="polite">
+  <div class="slide-details-copy"><h2 id="slideServiceTitle">Waterproofing Project</h2><p id="slideServiceDescription">Real site work by Kushwaha Waterproofing Services. Contact us for treatment details and a site inspection.</p></div>
+  <a class="btn" id="slideQuoteLink" href="#contact">Get a Quote →</a>
 </div>
 </section>
 <section class="all-types"><div class="wrap"><div><strong>We Undertake All Types of Waterproofing Work</strong><p>Residential • Commercial • Industrial | Roofs, terraces, bathrooms, walls, basements, tanks and more.</p></div><a class="btn cyan" href="services.html">See All Services →</a></div></section>
@@ -311,7 +350,15 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
     (function(){
       const slides=[...document.querySelectorAll('.hero-slide')], dots=[...document.querySelectorAll('.slider-dot')];
       let current=0, timer;
-      function showSlide(n){ if(!slides.length)return; current=(n+slides.length)%slides.length; slides.forEach((el,i)=>{el.classList.toggle('active',i===current);el.setAttribute('aria-hidden',i===current?'false':'true')}); dots.forEach((el,i)=>el.classList.toggle('active',i===current)); }
+      const slideInfo=[
+        ['Waterproofing Project','Real site photos of waterproofing work by our team. Ask us for the right treatment after a site inspection.'],
+        ['Roof Bituminous Coating Waterproofing','Bituminous coating work for roof surfaces. We assess the existing surface and leakage points before recommending treatment.'],
+        ['APP Membrane Waterproofing','APP bitumen membrane sheet waterproofing for suitable roof and terrace surfaces. Ask about surface preparation and installation.'],
+        ['Surface Preparation for Waterproofing','Cleaning and preparing the surface helps the waterproofing system bond properly.'],
+        ['Terrace Protective Coating','Protective terrace coating to help reduce water penetration when the system is selected and applied correctly.'],
+        ['Brick Bat Coba Waterproofing','Brick Bat Coba terrace treatment. Site condition and drainage are checked before work is recommended.']
+      ];
+      function showSlide(n){ if(!slides.length)return; current=(n+slides.length)%slides.length; slides.forEach((el,i)=>{el.classList.toggle('active',i===current);el.setAttribute('aria-hidden',i===current?'false':'true')}); dots.forEach((el,i)=>el.classList.toggle('active',i===current)); const info=slideInfo[current]||slideInfo[0]; const title=document.getElementById('slideServiceTitle'); const desc=document.getElementById('slideServiceDescription'); if(title)title.textContent=info[0]; if(desc)desc.textContent=info[1]; }
       function restart(){clearInterval(timer);timer=setInterval(()=>showSlide(current+1),4000)}
       document.getElementById('heroPrev')?.addEventListener('click',()=>{showSlide(current-1);restart()});
       document.getElementById('heroNext')?.addEventListener('click',()=>{showSlide(current+1);restart()});
