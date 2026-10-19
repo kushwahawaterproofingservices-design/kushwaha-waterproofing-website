@@ -472,6 +472,38 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <a href="https://wa.me/919888828636" rel="noopener noreferrer" style="display:inline-block;background:#16a34a;color:white;padding:14px 22px;margin:6px;border-radius:10px;text-decoration:none;font-weight:bold;" target="_blank">💬 WhatsApp</a>
 <a href="tel:9888339648" style="display:inline-block;background:#0b3b70;color:white;padding:14px 22px;margin:6px;border-radius:10px;text-decoration:none;font-weight:bold;">📱 Alternate: 9888339648</a>
 </div>
+
+<style id="kushwaha-final-desktop-mobile-slider-fix">
+/* Final responsive fix: use the actual full-width work photo, never blurred side duplicates. */
+.hero-slider{width:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#082b59!important}
+.hero-slides{position:relative!important;display:block!important;width:100%!important;height:clamp(300px,42vw,560px)!important;max-height:560px!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
+.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;background:transparent!important;filter:none!important;transform:none!important;box-shadow:none!important}
+/* The company poster is already a wide landscape image; show its full design. */
+.hero-slide:first-child>img{object-fit:contain!important;background:#082b59!important}
+.hero-slide:before,.hero-slide:after,.hero-slides:before,.hero-slides:after{display:none!important;content:none!important;filter:none!important;backdrop-filter:none!important}
+.hero-slide .slide-overlay{left:clamp(14px,3.5vw,44px)!important;bottom:clamp(28px,3.5vw,42px)!important;width:min(410px,calc(100% - 88px))!important;max-width:calc(100% - 88px)!important;padding:clamp(12px,1.5vw,18px)!important;border-radius:15px!important;background:linear-gradient(110deg,rgba(5,30,66,.94),rgba(5,49,91,.88))!important;backdrop-filter:none!important;box-shadow:0 8px 22px rgba(0,0,0,.22)!important}
+.hero-slide .slide-overlay h2{font-size:clamp(18px,2.1vw,28px)!important;line-height:1.12!important;margin:0 0 6px!important}
+.hero-slide .slide-overlay p{font-size:clamp(12px,1.25vw,15px)!important;line-height:1.4!important;margin:0 0 10px!important}
+.slider-arrow{z-index:6!important}
+.slider-dots{z-index:6!important;bottom:10px!important}
+@media(max-width:650px){
+ .hero-slides{height:56.25vw!important;max-height:410px!important;min-height:250px!important;aspect-ratio:16/9!important}
+ .hero-slide>img{object-fit:cover!important;object-position:center center!important}
+ .hero-slide:first-child>img{object-fit:contain!important}
+ .hero-slide .slide-overlay{left:12px!important;bottom:30px!important;width:min(310px,calc(100% - 64px))!important;max-width:calc(100% - 64px)!important;padding:11px!important;border-radius:12px!important}
+ .hero-slide .slide-overlay h2{font-size:17px!important;line-height:1.12!important}
+ .hero-slide .slide-overlay p{font-size:11px!important;line-height:1.35!important;margin-bottom:8px!important}
+ .hero-slide .slide-kicker{font-size:9px!important;letter-spacing:1px!important;margin-bottom:5px!important}
+ .hero-slide .slide-highlights{gap:5px!important;margin-bottom:8px!important}
+ .hero-slide .slide-highlights span{font-size:10px!important;padding:5px 7px!important}
+ .hero-slide .slide-quote{font-size:11px!important;padding:8px 11px!important}
+ .slider-arrow{width:34px!important;height:34px!important;font-size:20px!important}
+ .slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}
+ .slider-dots{bottom:7px!important;gap:7px!important}
+}
+</style>
 </body>
 </html>
 
@@ -518,4 +550,50 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 .slide-highlights span{display:inline-flex!important;align-items:center!important;gap:4px!important;padding:5px 8px!important;border-radius:7px!important;background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important;color:#f1f9ff!important;font-size:clamp(10px,.85vw,12px)!important;font-weight:700!important;line-height:1.2!important}
 .hero-slide .slide-quote{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:10px 15px!important;border-radius:10px!important;background:linear-gradient(135deg,#12a5df,#0870b9)!important;color:#fff!important;text-decoration:none!important;font-weight:900!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:0 5px 14px rgba(0,0,0,.18)!important;transition:transform .2s ease,box-shadow .2s ease!important}
 .hero-slide .slide-quote:hover{transform:translateY(-1px)!important;box-shadow:0 8px 18px rgba(0,0,0,.25)!important}
+</style>
+
+<style id="mobile-overlay-visibility-fix">
+/* Mobile-only change: keep the current photo/frame, but make the text card compact so it covers less of the real work photo. */
+@media (max-width: 650px) {
+  .hero-slide .slide-overlay {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 28px !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 9px 11px !important;
+    border-radius: 11px !important;
+    background: rgba(4, 31, 66, .84) !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,.16) !important;
+    backdrop-filter: none !important;
+  }
+  .hero-slide .slide-kicker {
+    font-size: 8px !important;
+    line-height: 1.15 !important;
+    letter-spacing: .7px !important;
+    padding: 3px 7px !important;
+    margin-bottom: 4px !important;
+  }
+  .hero-slide .slide-overlay h2 {
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 4px !important;
+  }
+  .hero-slide .slide-overlay p {
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 6px !important;
+    max-width: 100% !important;
+  }
+  .hero-slide .slide-highlights {
+    display: none !important;
+  }
+  .hero-slide .slide-quote {
+    padding: 6px 9px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    border-radius: 8px !important;
+  }
+  .slider-dots { bottom: 6px !important; }
+}
 </style>
