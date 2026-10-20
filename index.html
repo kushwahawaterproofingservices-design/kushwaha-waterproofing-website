@@ -678,22 +678,42 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 }
 </style>
 
+<!-- DESKTOP-ONLY slider fix: mobile styles are intentionally untouched. -->
+<style id="desktop-only-slider-fix">
+@media (min-width: 651px) {
+  .hero-slider { width:100% !important; max-width:100% !important; margin:0 !important; padding:0 !important; overflow:hidden !important; background:#fff !important; }
+  .hero-slides { width:100% !important; height:360px !important; min-height:360px !important; max-height:360px !important; aspect-ratio:auto !important; position:relative !important; overflow:hidden !important; }
+  .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; opacity:0 !important; visibility:hidden !important; overflow:hidden !important; }
+  .hero-slide.active { opacity:1 !important; visibility:visible !important; }
+  .hero-slide img { display:block !important; width:100% !important; height:100% !important; max-width:none !important; object-fit:cover !important; object-position:center !important; background:#fff !important; }
+  /* First slide is the promotional poster: preserve all its text and edges. */
+  .hero-slide:first-child img { object-fit:contain !important; background:#fff !important; }
+  /* Keep the work description as plain text; remove blue/mesh-style panel. */
+  .hero-slide .slide-copy { display:block !important; background:transparent !important; background-image:none !important; box-shadow:none !important; border:0 !important; backdrop-filter:none !important; padding:0 !important; }
+  .hero-slide .slide-copy:before, .hero-slide .slide-copy:after { display:none !important; content:none !important; }
+  .hero-slide:first-child .slide-copy { display:none !important; }
+}
+</style>
 
-<!-- FINAL SLIDER HEIGHT FIX: keep every slide in a short, uniform frame -->
-<style id="final-short-slider-fix">
-/* Full-width slider, compact height, and no stretched/cropped photos. */
-.hero-slider, #heroSlides { width:100% !important; max-width:100% !important; margin-left:0 !important; margin-right:0 !important; padding:0 !important; overflow:hidden !important; }
-#heroSlides { position:relative !important; display:block !important; height:220px !important; min-height:220px !important; max-height:220px !important; aspect-ratio:auto !important; background:#09264b !important; }
-#heroSlides > .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; min-height:0 !important; max-height:100% !important; overflow:hidden !important; display:flex !important; align-items:center !important; justify-content:center !important; }
-#heroSlides > .hero-slide > img { display:block !important; width:100% !important; height:100% !important; min-height:0 !important; max-width:100% !important; max-height:100% !important; object-fit:contain !important; object-position:center center !important; transform:none !important; filter:none !important; background:#09264b !important; }
-#heroSlides > .hero-slide .slide-overlay { max-height:calc(100% - 20px) !important; overflow:hidden !important; }
-@media (max-width:650px) {
-  #heroSlides { height:180px !important; min-height:180px !important; max-height:180px !important; }
-  #heroSlides > .hero-slide > img { object-fit:contain !important; }
-  #heroSlides > .hero-slide .slide-overlay { left:8px !important; bottom:8px !important; width:min(250px,calc(100% - 50px)) !important; max-width:calc(100% - 50px) !important; padding:8px !important; }
-  #heroSlides > .hero-slide .slide-overlay h2 { font-size:14px !important; margin:0 0 4px !important; }
-  #heroSlides > .hero-slide .slide-overlay p { font-size:10px !important; line-height:1.2 !important; margin:0 0 5px !important; }
-  #heroSlides > .hero-slide .slide-highlights { display:none !important; }
-  #heroSlides > .hero-slide .slide-quote { padding:5px 7px !important; font-size:10px !important; }
+<style id="desktop-final-text-only">
+@media (min-width:651px) {
+  .hero-slides { height:340px!important; min-height:340px!important; max-height:340px!important; aspect-ratio:auto!important; }
+  .hero-slide { isolation:isolate!important; }
+  .hero-slide .slide-overlay,
+  .hero-slide .slide-copy {
+    background:transparent!important; background-color:transparent!important; background-image:none!important;
+    border:0!important; border-radius:0!important; box-shadow:none!important; backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important; padding:0!important; outline:0!important;
+  }
+  .hero-slide .slide-overlay:before,.hero-slide .slide-overlay:after,
+  .hero-slide .slide-copy:before,.hero-slide .slide-copy:after,
+  .hero-slide .slide-highlights:before,.hero-slide .slide-highlights:after {
+    content:none!important; display:none!important; background:none!important; background-image:none!important;
+  }
+  .hero-slide .slide-kicker { background:transparent!important; border:0!important; box-shadow:none!important; padding:0!important; }
+  .hero-slide .slide-highlights { background:transparent!important; background-image:none!important; border:0!important; box-shadow:none!important; padding:0!important; }
+  .hero-slide .slide-highlights span,.hero-slide .slide-highlights li { background:transparent!important; background-image:none!important; border:0!important; box-shadow:none!important; }
+  .hero-slide .slide-quote { background:transparent!important; background-image:none!important; color:#fff!important; border:0!important; box-shadow:none!important; padding:0!important; text-decoration:underline!important; }
+  .hero-slide:first-child .slide-overlay,.hero-slide:first-child .slide-copy { display:none!important; }
 }
 </style>
