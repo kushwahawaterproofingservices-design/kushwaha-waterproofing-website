@@ -371,51 +371,12 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 </style>
 
 
-<style id="hero-slider-consistent-image-fit">
-/* Match all slides to the original work-photo frame without cropping the company poster. */
-#heroSlides.hero-slides { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:620px !important; overflow:hidden !important; background:transparent !important; }
-#heroSlides .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; overflow:hidden !important; background:transparent !important; }
-#heroSlides .hero-slide img { display:block !important; width:100% !important; max-width:100% !important; height:100% !important; margin:0 !important; padding:0 !important; border:0 !important; object-fit:contain !important; object-position:center center !important; background:transparent !important; }
-/* Remove the blue patterned banner below the slider. Keep only plain blue text. */
-.all-types { background:transparent !important; background-image:none !important; color:#0b3b70 !important; padding:14px 0 !important; border:0 !important; box-shadow:none !important; }
-.all-types::before,.all-types::after,.all-types .wrap::before,.all-types .wrap::after { display:none !important; content:none !important; background:none !important; }
-.all-types strong,.all-types p { color:#0b3b70 !important; text-shadow:none !important; }
-.all-types .btn { display:none !important; }
-@media(max-width:650px) { #heroSlides.hero-slides { aspect-ratio:16/9 !important; height:auto !important; max-height:420px !important; } #heroSlides .hero-slide img { object-fit:contain !important; } .all-types { padding:10px 0 !important; } }
-</style>
-
-<style id="slider-loop-tile-fix">
-/* Consistent 16:9 slider: real site photos fill the same frame without blue side gaps. */
-.hero-slider { background: #fff !important; }
-.hero-slides { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; max-height: 620px !important; min-height: 0 !important; overflow: hidden !important; }
-.hero-slide { inset: 0 !important; width: 100% !important; height: 100% !important; overflow: hidden !important; }
-.hero-slide img { display: block !important; width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; object-fit: cover !important; object-position: center center !important; background: transparent !important; }
-/* Keep the company poster uncropped because it contains contact information. */
-.hero-slide:first-child img { object-fit: contain !important; background: #fff !important; }
-/* The lower service line should be text only, with no blue banner or button. */
-.all-types { background: #fff !important; color: #0B1F4D !important; padding: 12px 0 !important; }
-.all-types .wrap { justify-content: center !important; }
-.all-types strong { color: #0B1F4D !important; }
-.all-types p { color: #0B1F4D !important; }
-.all-types .btn { display: none !important; }
-@media (max-width: 767px) { .hero-slides { aspect-ratio: 4 / 3 !important; max-height: none !important; } .hero-slide:first-child img { object-fit: contain !important; } }
-</style>
-
-
-<style id="reviewed-slider-fix-20261020">
-/* Keep all slides in one stable frame; show the whole company poster, and let work photos fill the frame. */
-.hero-slider { width:100% !important; overflow:hidden !important; background:#fff !important; }
-#heroSlides.hero-slides { position:relative !important; display:block !important; width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:560px !important; overflow:hidden !important; background:#fff !important; }
-#heroSlides .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; overflow:hidden !important; }
-#heroSlides .hero-slide > img { display:block !important; width:100% !important; height:100% !important; max-width:none !important; max-height:none !important; object-fit:cover !important; object-position:center center !important; background:transparent !important; }
-#heroSlides .hero-slide:first-child > img { object-fit:contain !important; object-position:center center !important; background:#fff !important; }
-#heroSlides .hero-slide.active { opacity:1 !important; visibility:visible !important; z-index:1 !important; }
-#heroSlides .slider-arrow, #heroSlides .slider-dots { z-index:7 !important; }
-@media (max-width:650px) {
- #heroSlides.hero-slides { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:420px !important; }
- #heroSlides .hero-slide > img { object-fit:cover !important; }
- #heroSlides .hero-slide:first-child > img { object-fit:contain !important; background:#fff !important; }
-}
+<style id="user-supplied-slider-images-fix">
+/* All six user-supplied slider images are 1536x864 (16:9). Keep one stable frame. */
+#heroSlides{width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;}
+#heroSlides>.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+#heroSlides>.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;background:transparent!important;}
+@media(max-width:650px){#heroSlides{aspect-ratio:16/9!important;height:auto!important;max-height:none!important;}#heroSlides>.hero-slide>img{object-fit:cover!important;object-position:center center!important;}}
 </style>
 </head>
 <body>
@@ -433,22 +394,22 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <section aria-label="Kushwaha Waterproofing Services featured banners" class="hero-slider">
 <div class="hero-slides" id="heroSlides">
 <article class="hero-slide active">
-<img alt="Kushwaha Waterproofing Services promotional poster" fetchpriority="high" loading="eager" src="assets/kushwaha-promotional-poster.jpg"/>
+<img alt="Kushwaha Waterproofing Services promotional poster" fetchpriority="high" loading="eager" src="assets/user-slider-poster.jpg"/>
 </article>
 <article class="hero-slide">
-<img alt="Roof bituminous waterproofing work" loading="lazy" src="assets/roof-before-after.jpg"/><div class="slide-overlay"><span class="slide-kicker">ROOF CARE · WEATHER DEFENCE</span><h2>Roof Bituminous Coating</h2><p>A protective roof layer planned around the surface and site conditions.</p><div class="slide-highlights"><span>✓ Surface-specific system</span><span>✓ Neat application</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Tile-finish waterproofed terrace, user-provided photo" loading="lazy" src="assets/user-slider-tile-finish.jpg"/><div class="slide-overlay"><span class="slide-kicker">ROOF CARE · WEATHER DEFENCE</span><h2>Roof Bituminous Coating</h2><p>A protective roof layer planned around the surface and site conditions.</p><div class="slide-highlights"><span>✓ Surface-specific system</span><span>✓ Neat application</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="APP bitumen membrane waterproofing work" loading="lazy" src="assets/app-bitumen-membrane-waterproofing.png"/><div class="slide-overlay"><span class="slide-kicker">APP MEMBRANE · ROOF PROTECTION</span><h2>APP Membrane Waterproofing</h2><p>Membrane sheet installation with attention to overlaps, edges and detailing.</p><div class="slide-highlights"><span>✓ Carefully sealed joints</span><span>✓ Roof &amp; terrace use</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Waterproofing membrane work on terrace, user-provided photo" loading="lazy" src="assets/user-slider-membrane-work.jpg"/><div class="slide-overlay"><span class="slide-kicker">APP MEMBRANE · ROOF PROTECTION</span><h2>APP Membrane Waterproofing</h2><p>Membrane sheet installation with attention to overlaps, edges and detailing.</p><div class="slide-highlights"><span>✓ Carefully sealed joints</span><span>✓ Roof &amp; terrace use</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Roof surface preparation before waterproofing" loading="lazy" src="assets/roof-waterproofing-surface-preparation.png"/><div class="slide-overlay"><span class="slide-kicker">STEP 01 · THE RIGHT START</span><h2>Surface Preparation</h2><p>Cleaning and preparing the roof so the waterproofing system can bond properly.</p><div class="slide-highlights"><span>✓ Clean surface</span><span>✓ Ready for treatment</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Black roof waterproofing coating work, user-provided photo" loading="lazy" src="assets/user-slider-black-coating.jpg"/><div class="slide-overlay"><span class="slide-kicker">STEP 01 · THE RIGHT START</span><h2>Surface Preparation</h2><p>Cleaning and preparing the roof so the waterproofing system can bond properly.</p><div class="slide-highlights"><span>✓ Clean surface</span><span>✓ Ready for treatment</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Terrace protective coating before and after waterproofing" loading="lazy" src="assets/terrace-checkerboard-finish-before-after.png"/><div class="slide-overlay"><span class="slide-kicker">TERRACE CARE · FINISHING</span><h2>Protective Terrace Coating</h2><p>A protective finish selected to suit the terrace surface and project requirements.</p><div class="slide-highlights"><span>✓ Even coating finish</span><span>✓ Site-based selection</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Terrace tile finish comparison, user-provided photo" loading="lazy" src="assets/user-slider-tile-comparison.jpg"/><div class="slide-overlay"><span class="slide-kicker">TERRACE CARE · FINISHING</span><h2>Protective Terrace Coating</h2><p>A protective finish selected to suit the terrace surface and project requirements.</p><div class="slide-highlights"><span>✓ Even coating finish</span><span>✓ Site-based selection</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Brick Bat Coba terrace waterproofing work" loading="lazy" src="assets/brick-bat-coba-work-in-progress.png"/><div class="slide-overlay"><span class="slide-kicker">TERRACE SYSTEM · BRICK BAT COBA</span><h2>Brick Bat Coba Work</h2><p>Terrace work planned with slope, drainage and surface preparation in mind.</p><div class="slide-highlights"><span>✓ Slope &amp; drainage focus</span><span>✓ Traditional terrace method</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Terrace surface preparation and finished roof, user-provided photo" loading="lazy" src="assets/user-slider-surface-prep.jpg"/><div class="slide-overlay"><span class="slide-kicker">TERRACE SYSTEM · BRICK BAT COBA</span><h2>Brick Bat Coba Work</h2><p>Terrace work planned with slope, drainage and surface preparation in mind.</p><div class="slide-highlights"><span>✓ Slope &amp; drainage focus</span><span>✓ Traditional terrace method</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <button aria-label="Previous banner" class="slider-arrow prev" id="heroPrev" type="button">‹</button><button aria-label="Next banner" class="slider-arrow next" id="heroNext" type="button">›</button>
 <div aria-label="Choose banner" class="slider-dots" id="heroDots"><button aria-label="Banner 1" class="slider-dot active"></button><button aria-label="Banner 2" class="slider-dot"></button><button aria-label="Banner 3" class="slider-dot"></button><button aria-label="Banner 4" class="slider-dot"></button><button aria-label="Banner 5" class="slider-dot"></button><button aria-label="Banner 6" class="slider-dot"></button></div>
@@ -543,7 +504,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
         ['Brick Bat Coba Waterproofing','Brick Bat Coba terrace treatment. Site condition and drainage are checked before work is recommended.']
       ];
       function showSlide(n){ if(!slides.length)return; current=(n+slides.length)%slides.length; slides.forEach((el,i)=>{el.classList.toggle('active',i===current);el.setAttribute('aria-hidden',i===current?'false':'true')}); dots.forEach((el,i)=>el.classList.toggle('active',i===current)); const info=slideInfo[current]||slideInfo[0]; const title=document.getElementById('slideServiceTitle'); const desc=document.getElementById('slideServiceDescription'); if(title)title.textContent=info[0]; if(desc)desc.textContent=info[1]; }
-      function restart(){clearInterval(timer); if(slides.length>1){timer=setInterval(()=>{showSlide((current+1)%slides.length)},4000)}}
+      function restart(){if(timer)clearInterval(timer);timer=setInterval(()=>showSlide((current+1)%slides.length),4000)}
       document.getElementById('heroPrev')?.addEventListener('click',()=>{showSlide(current-1);restart()});
       document.getElementById('heroNext')?.addEventListener('click',()=>{showSlide(current+1);restart()});
       dots.forEach((el,i)=>el.addEventListener('click',()=>{showSlide(i);restart()}));
