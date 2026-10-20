@@ -717,3 +717,17 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
   .hero-slide:first-child .slide-overlay,.hero-slide:first-child .slide-copy { display:none!important; }
 }
 </style>
+
+<style id="desktop-no-extra-slider-text-final">
+@media (min-width:651px) {
+  /* Keep desktop hero compact so the next section is visible sooner. */
+  .hero-slider { width:100%!important; max-width:100%!important; margin:0!important; padding:0!important; overflow:hidden!important; }
+  .hero-slides { width:100%!important; height:300px!important; min-height:300px!important; max-height:300px!important; aspect-ratio:auto!important; overflow:hidden!important; }
+  .hero-slide { position:absolute!important; inset:0!important; width:100%!important; height:100%!important; }
+  .hero-slide .slide-copy, .hero-slide .slide-overlay, .hero-slide .slide-quote,
+  .hero-slide .slide-kicker, .hero-slide .slide-highlights, .hero-slide .slide-features,
+  .hero-slide .feature-tags, .hero-slide .benefits { display:none!important; }
+  .hero-slide img { width:100%!important; height:100%!important; object-fit:cover!important; object-position:center!important; }
+  .hero-slide:first-child img { object-fit:contain!important; background:#fff!important; }
+}
+</style>
