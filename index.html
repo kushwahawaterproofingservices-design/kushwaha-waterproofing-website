@@ -8,7 +8,7 @@
 <meta name="description" content="Kushwaha Waterproofing Services provides roof and terrace waterproofing, PU coating, injection grouting, bathroom leakage repair, wall seepage, Brick Bat Coba, APP membrane and protective coatings in Chandigarh, Mohali and Panchkula. Call 9888828636 for a site visit and quote."/>
 <meta content="#082f62" name="theme-color"/>
 <meta content="https://kushwahawaterproofingservice.com/" property="og:url"/>
-<meta content="https://kushwahawaterproofingservice.com/assets/roof-before-after.jpg" property="og:image"/>
+<meta content="https://kushwahawaterproofingservice.com/assets/roof-before-after.webp" property="og:image"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://kushwahawaterproofingservice.com/" rel="canonical"/>
 <meta content="Kushwaha Waterproofing Services" property="og:title"/>
@@ -61,7 +61,7 @@
     .hero-slider{position:relative;background:#062b5a;overflow:hidden}
     /* Keep the hero banner a controlled size on laptop/desktop instead of letting
        the source image's natural height take over the whole screen. */
-    .hero-slides{position:relative;width:100%;aspect-ratio:16/9;height:auto;min-height:0;max-height:620px;overflow:hidden}
+    .hero-slides{position:relative;width:100%;aspect-ratio:16/9;height:auto;min-height:0;max-height:620px;overflow:hidden;contain:layout paint}
     .hero-slide{position:absolute;inset:0;width:100%;height:100%;opacity:0;visibility:hidden;transition:opacity .8s ease;display:flex;align-items:center;justify-content:center;overflow:hidden;border:0;outline:0}
     .hero-slide.active{opacity:1;visibility:visible;position:absolute}
     .hero-slide img{width:100%!important;max-width:none!important;height:100%;object-fit:contain!important;object-position:center;display:block;background:#062b5a;border:0;outline:0;box-shadow:none}
@@ -70,7 +70,7 @@
     .slide-copy h1{font-size:clamp(26px,4.2vw,52px);line-height:1.05;color:#fff;margin:0 0 12px;letter-spacing:-.8px}
     .slide-copy p{font-size:clamp(13px,1.5vw,18px);margin:0 0 18px;color:#eef8ff;max-width:560px}
     .slide-copy .eyebrow{background:#ffffff20;border-color:#ffffff65;color:#fff}
-    .slider-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid #ffffff70;border-radius:50%;background:#062951b8;color:#fff;font-size:26px;cursor:pointer;display:grid;place-items:center}
+    .slider-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:44px;height:44px;min-width:44px;min-height:44px;border:1px solid #ffffff70;border-radius:50%;background:#062951b8;color:#fff;font-size:26px;cursor:pointer;display:grid;place-items:center}
     .slider-arrow.prev{left:18px}.slider-arrow.next{right:18px}
     .slider-dots{position:absolute;z-index:4;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:9px}
     .slider-dot{width:10px;height:10px;padding:0;border:1px solid white;border-radius:50%;background:#ffffff80;cursor:pointer}.slider-dot.active{background:#fff;transform:scale(1.25)}
@@ -371,28 +371,50 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 </style>
 
 
-<style id="user-supplied-slider-images-fix">
-/* All six user-supplied slider images are 1536x864 (16:9). Keep one stable frame. */
-#heroSlides{width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;}
-#heroSlides>.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important;}
-#heroSlides>.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;background:transparent!important;}
-@media(max-width:650px){#heroSlides{aspect-ratio:16/9!important;height:auto!important;max-height:none!important;}#heroSlides>.hero-slide>img{object-fit:cover!important;object-position:center center!important;}}
+<style id="hero-slider-consistent-image-fit">
+/* Match all slides to the original work-photo frame without cropping the company poster. */
+#heroSlides.hero-slides { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:620px !important; overflow:hidden !important; background:transparent !important; }
+#heroSlides .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; overflow:hidden !important; background:transparent !important; }
+#heroSlides .hero-slide img { display:block !important; width:100% !important; max-width:100% !important; height:100% !important; margin:0 !important; padding:0 !important; border:0 !important; object-fit:contain !important; object-position:center center !important; background:transparent !important; }
+/* Remove the blue patterned banner below the slider. Keep only plain blue text. */
+.all-types { background:transparent !important; background-image:none !important; color:#0b3b70 !important; padding:14px 0 !important; border:0 !important; box-shadow:none !important; }
+.all-types::before,.all-types::after,.all-types .wrap::before,.all-types .wrap::after { display:none !important; content:none !important; background:none !important; }
+.all-types strong,.all-types p { color:#0b3b70 !important; text-shadow:none !important; }
+.all-types .btn { display:none !important; }
+@media(max-width:650px) { #heroSlides.hero-slides { aspect-ratio:16/9 !important; height:auto !important; max-height:420px !important; } #heroSlides .hero-slide img { object-fit:contain !important; } .all-types { padding:10px 0 !important; } }
 </style>
 
-<style id="desktop-slider-layout-final-fix">
-/* Desktop-only slider repair. Mobile rules above remain untouched. */
-@media (min-width:651px){
-  .hero-slider{width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#082b59!important}
-  .hero-slides{position:relative!important;width:100%!important;height:clamp(360px,31vw,430px)!important;min-height:360px!important;max-height:430px!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082b59!important}
-  .hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;opacity:0!important;visibility:hidden!important;z-index:0!important;background:#082b59!important}
-  .hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
-  .hero-slide .slide-overlay,.hero-slide .slide-copy,.hero-slide .slide-highlights,.hero-slide .slide-quote{display:none!important}
-  .hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-position:center!important;transform:none!important;filter:none!important;background:#082b59!important}
-  /* The first slide is the poster: preserve its complete artwork. Work photos fill the wide frame. */
-  .hero-slide:first-child>img{object-fit:contain!important}
-  .hero-slide:not(:first-child)>img{object-fit:cover!important}
-  .hero-slide:before,.hero-slide:after,.hero-slides:before,.hero-slides:after{content:none!important;display:none!important;filter:none!important;backdrop-filter:none!important}
-  .slider-dots{z-index:5!important}
+<style id="slider-loop-tile-fix">
+/* Consistent 16:9 slider: real site photos fill the same frame without blue side gaps. */
+.hero-slider { background: #fff !important; }
+.hero-slides { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; max-height: 620px !important; min-height: 0 !important; overflow: hidden !important; }
+.hero-slide { inset: 0 !important; width: 100% !important; height: 100% !important; overflow: hidden !important; }
+.hero-slide img { display: block !important; width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; object-fit: cover !important; object-position: center center !important; background: transparent !important; }
+/* Keep the company poster uncropped because it contains contact information. */
+.hero-slide:first-child img { object-fit: contain !important; background: #fff !important; }
+/* The lower service line should be text only, with no blue banner or button. */
+.all-types { background: #fff !important; color: #0B1F4D !important; padding: 12px 0 !important; }
+.all-types .wrap { justify-content: center !important; }
+.all-types strong { color: #0B1F4D !important; }
+.all-types p { color: #0B1F4D !important; }
+.all-types .btn { display: none !important; }
+@media (max-width: 767px) { .hero-slides { aspect-ratio: 4 / 3 !important; max-height: none !important; } .hero-slide:first-child img { object-fit: contain !important; } }
+</style>
+
+
+<style id="reviewed-slider-fix-20261020">
+/* Keep all slides in one stable frame; show the whole company poster, and let work photos fill the frame. */
+.hero-slider { width:100% !important; overflow:hidden !important; background:#fff !important; }
+#heroSlides.hero-slides { position:relative !important; display:block !important; width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:560px !important; overflow:hidden !important; background:#fff !important; }
+#heroSlides .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; overflow:hidden !important; }
+#heroSlides .hero-slide > img { display:block !important; width:100% !important; height:100% !important; max-width:none !important; max-height:none !important; object-fit:cover !important; object-position:center center !important; background:transparent !important; }
+#heroSlides .hero-slide:first-child > img { object-fit:contain !important; object-position:center center !important; background:#fff !important; }
+#heroSlides .hero-slide.active { opacity:1 !important; visibility:visible !important; z-index:1 !important; }
+#heroSlides .slider-arrow, #heroSlides .slider-dots { z-index:7 !important; }
+@media (max-width:650px) {
+ #heroSlides.hero-slides { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:420px !important; }
+ #heroSlides .hero-slide > img { object-fit:cover !important; }
+ #heroSlides .hero-slide:first-child > img { object-fit:contain !important; background:#fff !important; }
 }
 </style>
 </head>
@@ -411,22 +433,22 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <section aria-label="Kushwaha Waterproofing Services featured banners" class="hero-slider">
 <div class="hero-slides" id="heroSlides">
 <article class="hero-slide active">
-<img alt="Kushwaha Waterproofing Services promotional poster" fetchpriority="high" loading="eager" src="assets/user-slider-poster.jpg"/>
+<img alt="Kushwaha Waterproofing Services promotional poster" fetchpriority="high" loading="eager" src="assets/kushwaha-promotional-poster.webp"/>
 </article>
 <article class="hero-slide">
-<img alt="Tile-finish waterproofed terrace, user-provided photo" loading="lazy" src="assets/user-slider-tile-finish.jpg"/><div class="slide-overlay"><span class="slide-kicker">ROOF CARE · WEATHER DEFENCE</span><h2>Roof Bituminous Coating</h2><p>A protective roof layer planned around the surface and site conditions.</p><div class="slide-highlights"><span>✓ Surface-specific system</span><span>✓ Neat application</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Roof bituminous waterproofing work" loading="lazy" decoding="async" src="assets/roof-before-after.webp"/><div class="slide-overlay"><span class="slide-kicker">ROOF CARE · WEATHER DEFENCE</span><h2>Roof Bituminous Coating</h2><p>A protective roof layer planned around the surface and site conditions.</p><div class="slide-highlights"><span>✓ Surface-specific system</span><span>✓ Neat application</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Waterproofing membrane work on terrace, user-provided photo" loading="lazy" src="assets/user-slider-membrane-work.jpg"/><div class="slide-overlay"><span class="slide-kicker">APP MEMBRANE · ROOF PROTECTION</span><h2>APP Membrane Waterproofing</h2><p>Membrane sheet installation with attention to overlaps, edges and detailing.</p><div class="slide-highlights"><span>✓ Carefully sealed joints</span><span>✓ Roof &amp; terrace use</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="APP bitumen membrane waterproofing work" loading="lazy" decoding="async" src="assets/app-bitumen-membrane-waterproofing.webp"/><div class="slide-overlay"><span class="slide-kicker">APP MEMBRANE · ROOF PROTECTION</span><h2>APP Membrane Waterproofing</h2><p>Membrane sheet installation with attention to overlaps, edges and detailing.</p><div class="slide-highlights"><span>✓ Carefully sealed joints</span><span>✓ Roof &amp; terrace use</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Black roof waterproofing coating work, user-provided photo" loading="lazy" src="assets/user-slider-black-coating.jpg"/><div class="slide-overlay"><span class="slide-kicker">STEP 01 · THE RIGHT START</span><h2>Surface Preparation</h2><p>Cleaning and preparing the roof so the waterproofing system can bond properly.</p><div class="slide-highlights"><span>✓ Clean surface</span><span>✓ Ready for treatment</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Roof surface preparation before waterproofing" loading="lazy" decoding="async" src="assets/roof-waterproofing-surface-preparation.webp"/><div class="slide-overlay"><span class="slide-kicker">STEP 01 · THE RIGHT START</span><h2>Surface Preparation</h2><p>Cleaning and preparing the roof so the waterproofing system can bond properly.</p><div class="slide-highlights"><span>✓ Clean surface</span><span>✓ Ready for treatment</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Terrace tile finish comparison, user-provided photo" loading="lazy" src="assets/user-slider-tile-comparison.jpg"/><div class="slide-overlay"><span class="slide-kicker">TERRACE CARE · FINISHING</span><h2>Protective Terrace Coating</h2><p>A protective finish selected to suit the terrace surface and project requirements.</p><div class="slide-highlights"><span>✓ Even coating finish</span><span>✓ Site-based selection</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Terrace protective coating before and after waterproofing" loading="lazy" decoding="async" src="assets/terrace-checkerboard-finish-before-after.webp"/><div class="slide-overlay"><span class="slide-kicker">TERRACE CARE · FINISHING</span><h2>Protective Terrace Coating</h2><p>A protective finish selected to suit the terrace surface and project requirements.</p><div class="slide-highlights"><span>✓ Even coating finish</span><span>✓ Site-based selection</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Terrace surface preparation and finished roof, user-provided photo" loading="lazy" src="assets/user-slider-surface-prep.jpg"/><div class="slide-overlay"><span class="slide-kicker">TERRACE SYSTEM · BRICK BAT COBA</span><h2>Brick Bat Coba Work</h2><p>Terrace work planned with slope, drainage and surface preparation in mind.</p><div class="slide-highlights"><span>✓ Slope &amp; drainage focus</span><span>✓ Traditional terrace method</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Brick Bat Coba terrace waterproofing work" loading="lazy" decoding="async" src="assets/brick-bat-coba-work-in-progress.webp"/><div class="slide-overlay"><span class="slide-kicker">TERRACE SYSTEM · BRICK BAT COBA</span><h2>Brick Bat Coba Work</h2><p>Terrace work planned with slope, drainage and surface preparation in mind.</p><div class="slide-highlights"><span>✓ Slope &amp; drainage focus</span><span>✓ Traditional terrace method</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <button aria-label="Previous banner" class="slider-arrow prev" id="heroPrev" type="button">‹</button><button aria-label="Next banner" class="slider-arrow next" id="heroNext" type="button">›</button>
 <div aria-label="Choose banner" class="slider-dots" id="heroDots"><button aria-label="Banner 1" class="slider-dot active"></button><button aria-label="Banner 2" class="slider-dot"></button><button aria-label="Banner 3" class="slider-dot"></button><button aria-label="Banner 4" class="slider-dot"></button><button aria-label="Banner 5" class="slider-dot"></button><button aria-label="Banner 6" class="slider-dot"></button></div>
@@ -437,18 +459,18 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <div class="wrap">
 <div class="section-head"><span class="kicker">What we do</span><h2>Waterproofing services</h2><p>Every building and leakage problem is different. Explore our services below; the final treatment should be selected after considering the source of water, surface condition, exposure and project requirements.</p></div>
 <div class="cards">
-<article class="service-card"><img alt="Roof and  Terrace Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/roof-waterproofing-surface-preparation.png"/><div aria-hidden="true" class="iconbox">⌂</div><h3>Roof &amp; Terrace Waterproofing</h3><p>Roof and terrace surfaces are exposed to rain, standing water, heat and changing weather. Our approach starts with checking the surface, drainage, cracks, joints and any existing coating. Depending on the condition, the work may include cleaning, repairing weak areas, preparing the surface, treating corners and applying a suitable waterproofing system. Proper preparation and drainage detailing are important parts of a dependable roof treatment.</p></article>
-<article class="service-card"><img alt="PU Waterproofing Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/pu-waterproofing-coating.jpg"/><div aria-hidden="true" class="iconbox">◈</div><h3>PU Waterproofing Coating</h3><p>Polyurethane (PU) coating can create a continuous protective layer on suitable prepared surfaces. The system is selected according to the substrate, exposure, movement and product instructions. Work may include surface cleaning, repairing defects, primer application, detailing around joints and outlets, and applying the coating at the specified coverage and thickness. The final performance depends on correct preparation, curing and maintenance.</p></article>
-<article class="service-card"><img alt="Water leakage repair reference photo; replace with a dedicated PU injection grouting photo when available" class="service-photo" decoding="async" loading="lazy" src="assets/ceiling-leakage-repair.png"/><div aria-hidden="true" class="iconbox">↗</div><h3>PU Injection Grouting</h3><p>PU injection grouting is used for selected active leakage paths in concrete, cracks and construction joints. After assessing where water is entering, suitable injection points are planned and the material is injected using appropriate equipment. Some PU grouts react with moisture and expand to help seal the water path. The right material and method depend on the crack, water pressure and structural condition.</p></article>
-<article class="service-card"><img alt="Real site bathroom waterproofing work in progress" class="service-photo" decoding="async" loading="lazy" src="assets/bathroom-waterproofing-real-site.jpg"/><div aria-hidden="true" class="iconbox">▦</div><h3>Bathroom &amp; Toilet Waterproofing</h3><p>Leakage from bathrooms and toilets may be linked to floor waterproofing, pipe penetrations, wall-floor junctions, tile joints or plumbing defects. The affected area should be assessed before selecting a repair. Depending on the issue, treatment may involve joint sealing, plumbing coordination, removal of damaged finishes or renewing a waterproofing layer before tiles are reinstated. Addressing the source is essential before repairing stains below.</p></article>
-<article class="service-card"><img alt="Wall dampness and seepage site photo" class="service-photo" decoding="async" loading="lazy" src="assets/wall-dampness-site-crop.jpg"/><div aria-hidden="true" class="iconbox">≋</div><h3>Wall Dampness &amp; Seepage</h3><p>Damp patches, peeling paint, salt deposits and bubbling plaster can have different causes, including external rain penetration, plumbing leaks, roof junctions or rising moisture. We help assess the visible symptoms and likely water-entry points before discussing a suitable treatment. Depending on the source, work may involve external waterproofing, crack sealing, joint treatment or repair of affected plaster after the moisture source has been addressed.</p></article>
-<article class="service-card"><img alt="Brick Bat Coba Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/brick-bat-coba-work-in-progress.png"/><div aria-hidden="true" class="iconbox">▧</div><h3>Brick Bat Coba Waterproofing</h3><p>Brick Bat Coba is a traditional terrace treatment that uses brick pieces and cement mortar to form a sloped protective layer when suitable for the structure. The work requires attention to the existing slab, levels, rainwater outlets, junctions and curing. A correctly planned slope helps water drain instead of remaining on the roof. The appropriate waterproofing details should be selected according to site conditions and the intended roof finish.</p></article>
-<article class="service-card"><img alt="APP Bitumen Membrane waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/app-bitumen-membrane-waterproofing.png"/><div aria-hidden="true" class="iconbox">▤</div><h3>APP Bitumen Membrane</h3><p>APP modified bitumen membrane systems are used on suitable roofs and other specified surfaces to provide a waterproofing layer. Reliable installation depends on preparing and priming the substrate, setting out the sheets, forming correct overlaps, and detailing outlets, corners, upstands and penetrations. The membrane type and installation method should match the project specification and safety requirements, especially when torch application is used.</p></article>
-<article class="service-card"><img alt="Basement and  Foundation Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/fosroc-proofex-3000-foundation-waterproofing.png"/><div aria-hidden="true" class="iconbox">▥</div><h3>Basement &amp; Foundation Waterproofing</h3><p>Below-ground walls and foundations can be exposed to soil moisture, groundwater and water pressure. A suitable system may use a specified membrane, protective layer and carefully detailed joints, corners and service penetrations. Surface preparation and protection against damage during backfilling are important. The system should be selected for the site conditions and designed drainage requirements; no single membrane is appropriate for every foundation.</p></article>
-<article class="service-card"><img alt="Protective and  Bituminous Roof Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/roof-bituminous-coating-work.png"/><div aria-hidden="true" class="iconbox">▱</div><h3>Protective &amp; Bituminous Roof Coating</h3><p>Protective roof coatings can help shield compatible surfaces from weather exposure and moisture. The surface must be sound and clean, with cracks, joints and drainage details treated as required by the selected system. The coating is applied according to the manufacturer’s coverage and curing guidance. Coating selection depends on the roof material, existing layers, sunlight exposure and the type of protection required.</p></article>
-<article class="service-card"><img alt="HDPE membrane waterproofing installation" class="service-photo" decoding="async" loading="lazy" src="assets/membrane-waterproofing-project.png"/><div aria-hidden="true" class="iconbox">▤</div><h3>HDPE Membrane Waterproofing</h3><p>HDPE (High-Density Polyethylene) membrane waterproofing provides a durable barrier against moisture and water ingress when installed on a properly prepared surface. The system requires suitable surface preparation, correct membrane placement, sealed overlaps and carefully detailed corners and pipe penetrations. A protection layer may be needed before backfilling or covering, depending on the project design.</p></article>
-<article class="service-card"><img alt="Epoxy Flooring and  Floor Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/videos/epoxy-flooring.jpg"/><div aria-hidden="true" class="iconbox">◇</div><h3>Epoxy Flooring &amp; Floor Coating</h3><p>Epoxy floor systems can provide a smooth, hard-wearing finish on suitable concrete floors in homes, commercial areas and industrial spaces. Preparation is critical and may include removing weak material, cleaning, grinding and repairing surface defects. The system is selected according to traffic, moisture and intended use, then mixed and applied within its working time. Curing and site access should follow the product instructions.</p></article>
-<article class="service-card"><img alt="Expansion joint preparation and PU sealant treatment" class="service-photo" decoding="async" loading="lazy" src="assets/roof-joint-waterproofing-treatment.png"/><div aria-hidden="true" class="iconbox">⌗</div><h3>Tile Joint Cutting &amp; PU Sealant Filling</h3><p>Tile joints and movement joints may need careful cleaning and resealing when the existing seal has failed or water is entering through the connection. Depending on the joint, old material may be removed, edges prepared and a compatible PU sealant applied with the correct joint shape and depth. This service is different from replacing a failed waterproofing layer beneath tiles, so the source of leakage should be assessed first.</p></article>
+<article class="service-card"><img alt="Roof and  Terrace Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/roof-waterproofing-surface-preparation.webp"/><div aria-hidden="true" class="iconbox">⌂</div><h3>Roof &amp; Terrace Waterproofing</h3><p>Roof and terrace surfaces are exposed to rain, standing water, heat and changing weather. Our approach starts with checking the surface, drainage, cracks, joints and any existing coating. Depending on the condition, the work may include cleaning, repairing weak areas, preparing the surface, treating corners and applying a suitable waterproofing system. Proper preparation and drainage detailing are important parts of a dependable roof treatment.</p></article>
+<article class="service-card"><img alt="PU Waterproofing Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/pu-waterproofing-coating.webp"/><div aria-hidden="true" class="iconbox">◈</div><h3>PU Waterproofing Coating</h3><p>Polyurethane (PU) coating can create a continuous protective layer on suitable prepared surfaces. The system is selected according to the substrate, exposure, movement and product instructions. Work may include surface cleaning, repairing defects, primer application, detailing around joints and outlets, and applying the coating at the specified coverage and thickness. The final performance depends on correct preparation, curing and maintenance.</p></article>
+<article class="service-card"><img alt="Water leakage repair reference photo; replace with a dedicated PU injection grouting photo when available" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/ceiling-leakage-repair.webp"/><div aria-hidden="true" class="iconbox">↗</div><h3>PU Injection Grouting</h3><p>PU injection grouting is used for selected active leakage paths in concrete, cracks and construction joints. After assessing where water is entering, suitable injection points are planned and the material is injected using appropriate equipment. Some PU grouts react with moisture and expand to help seal the water path. The right material and method depend on the crack, water pressure and structural condition.</p></article>
+<article class="service-card"><img alt="Real site bathroom waterproofing work in progress" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/bathroom-waterproofing-real-site.webp"/><div aria-hidden="true" class="iconbox">▦</div><h3>Bathroom &amp; Toilet Waterproofing</h3><p>Leakage from bathrooms and toilets may be linked to floor waterproofing, pipe penetrations, wall-floor junctions, tile joints or plumbing defects. The affected area should be assessed before selecting a repair. Depending on the issue, treatment may involve joint sealing, plumbing coordination, removal of damaged finishes or renewing a waterproofing layer before tiles are reinstated. Addressing the source is essential before repairing stains below.</p></article>
+<article class="service-card"><img alt="Wall dampness and seepage site photo" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/wall-dampness-site-crop.webp"/><div aria-hidden="true" class="iconbox">≋</div><h3>Wall Dampness &amp; Seepage</h3><p>Damp patches, peeling paint, salt deposits and bubbling plaster can have different causes, including external rain penetration, plumbing leaks, roof junctions or rising moisture. We help assess the visible symptoms and likely water-entry points before discussing a suitable treatment. Depending on the source, work may involve external waterproofing, crack sealing, joint treatment or repair of affected plaster after the moisture source has been addressed.</p></article>
+<article class="service-card"><img alt="Brick Bat Coba Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/brick-bat-coba-work-in-progress.webp"/><div aria-hidden="true" class="iconbox">▧</div><h3>Brick Bat Coba Waterproofing</h3><p>Brick Bat Coba is a traditional terrace treatment that uses brick pieces and cement mortar to form a sloped protective layer when suitable for the structure. The work requires attention to the existing slab, levels, rainwater outlets, junctions and curing. A correctly planned slope helps water drain instead of remaining on the roof. The appropriate waterproofing details should be selected according to site conditions and the intended roof finish.</p></article>
+<article class="service-card"><img alt="APP Bitumen Membrane waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/app-bitumen-membrane-waterproofing.webp"/><div aria-hidden="true" class="iconbox">▤</div><h3>APP Bitumen Membrane</h3><p>APP modified bitumen membrane systems are used on suitable roofs and other specified surfaces to provide a waterproofing layer. Reliable installation depends on preparing and priming the substrate, setting out the sheets, forming correct overlaps, and detailing outlets, corners, upstands and penetrations. The membrane type and installation method should match the project specification and safety requirements, especially when torch application is used.</p></article>
+<article class="service-card"><img alt="Basement and  Foundation Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/fosroc-proofex-3000-foundation-waterproofing.webp"/><div aria-hidden="true" class="iconbox">▥</div><h3>Basement &amp; Foundation Waterproofing</h3><p>Below-ground walls and foundations can be exposed to soil moisture, groundwater and water pressure. A suitable system may use a specified membrane, protective layer and carefully detailed joints, corners and service penetrations. Surface preparation and protection against damage during backfilling are important. The system should be selected for the site conditions and designed drainage requirements; no single membrane is appropriate for every foundation.</p></article>
+<article class="service-card"><img alt="Protective and  Bituminous Roof Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/roof-bituminous-coating-work.webp"/><div aria-hidden="true" class="iconbox">▱</div><h3>Protective &amp; Bituminous Roof Coating</h3><p>Protective roof coatings can help shield compatible surfaces from weather exposure and moisture. The surface must be sound and clean, with cracks, joints and drainage details treated as required by the selected system. The coating is applied according to the manufacturer’s coverage and curing guidance. Coating selection depends on the roof material, existing layers, sunlight exposure and the type of protection required.</p></article>
+<article class="service-card"><img alt="HDPE membrane waterproofing installation" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/membrane-waterproofing-project.webp"/><div aria-hidden="true" class="iconbox">▤</div><h3>HDPE Membrane Waterproofing</h3><p>HDPE (High-Density Polyethylene) membrane waterproofing provides a durable barrier against moisture and water ingress when installed on a properly prepared surface. The system requires suitable surface preparation, correct membrane placement, sealed overlaps and carefully detailed corners and pipe penetrations. A protection layer may be needed before backfilling or covering, depending on the project design.</p></article>
+<article class="service-card"><img alt="Epoxy Flooring and  Floor Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/videos/epoxy-flooring.jpg"/><div aria-hidden="true" class="iconbox">◇</div><h3>Epoxy Flooring &amp; Floor Coating</h3><p>Epoxy floor systems can provide a smooth, hard-wearing finish on suitable concrete floors in homes, commercial areas and industrial spaces. Preparation is critical and may include removing weak material, cleaning, grinding and repairing surface defects. The system is selected according to traffic, moisture and intended use, then mixed and applied within its working time. Curing and site access should follow the product instructions.</p></article>
+<article class="service-card"><img alt="Expansion joint preparation and PU sealant treatment" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/roof-joint-waterproofing-treatment.webp"/><div aria-hidden="true" class="iconbox">⌗</div><h3>Tile Joint Cutting &amp; PU Sealant Filling</h3><p>Tile joints and movement joints may need careful cleaning and resealing when the existing seal has failed or water is entering through the connection. Depending on the joint, old material may be removed, edges prepared and a compatible PU sealant applied with the correct joint shape and depth. This service is different from replacing a failed waterproofing layer beneath tiles, so the source of leakage should be assessed first.</p></article>
 </div>
 </div>
 </section>
@@ -469,7 +491,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <div class="video-grid">
 <article class="video-item"><video controls="" playsinline="" poster="assets/videos/roof-surface-preparation.jpg" preload="metadata"><source src="assets/videos/roof-surface-preparation.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>Roof Surface Preparation</strong><p>Surface cleaning and preparation before applying a waterproofing system.</p></div></article>
 <article class="video-item"><video controls="" playsinline="" poster="assets/videos/brick-bat-coba.jpg" preload="metadata"><source src="assets/videos/brick-bat-coba.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>Brick Bat Coba Work</strong><p>Terrace brick-bat laying as part of a roof waterproofing treatment.</p></div></article>
-<article class="video-item"><video controls="" playsinline="" poster="assets/videos/pu-waterproofing-coating.jpg" preload="metadata"><source src="assets/videos/pu-waterproofing-coating.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>PU Waterproofing Coating</strong><p>Application of a protective coating over a prepared roof surface.</p></div></article>
+<article class="video-item"><video controls="" playsinline="" poster="assets/videos/pu-waterproofing-coating.webp" preload="metadata"><source src="assets/videos/pu-waterproofing-coating.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>PU Waterproofing Coating</strong><p>Application of a protective coating over a prepared roof surface.</p></div></article>
 <article class="video-item"><video controls="" playsinline="" poster="assets/videos/epoxy-flooring.jpg" preload="metadata"><source src="assets/videos/epoxy-flooring.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>Epoxy Flooring Work</strong><p>Floor coating work in an indoor corridor, showing the application process.</p></div></article>
 </div>
 </div>
@@ -477,11 +499,11 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <section class="gallery" id="projects">
 <div class="wrap"><div class="section-head"><span class="kicker">Work gallery</span><h2>Waterproofing project photos</h2><p>Browse photos supplied for the website, showing examples of roof preparation, membrane installation, terrace finishes, joint treatment and protective coating. Each project needs its own inspection and treatment plan.</p></div>
 <div class="photo-carousel"><div class="gallery-grid" id="workGallery">
-<article class="gallery-item"><img alt="Brick bat coba work in progress on a roof terrace" decoding="async" loading="lazy" src="assets/brick-bat-coba-work-in-progress.png"/><div><strong>Brick Bat Coba – Work in Progress</strong><p>Brick-bat laying and mortar application on a terrace.</p></div></article>
-<article class="gallery-item"><img alt="Waterproofing membrane installation on a construction project" decoding="async" loading="lazy" src="assets/membrane-waterproofing-project.png"/><div><strong>Membrane Waterproofing</strong><p>Membrane installation on a large construction surface.</p></div></article>
-<article class="gallery-item"><img alt="Waterproofing treatment along a roof joint" decoding="async" loading="lazy" src="assets/roof-joint-waterproofing-treatment.png"/><div><strong>Roof Joint Treatment</strong><p>Waterproofing detail along a roof joint or vulnerable connection.</p></div></article>
-<article class="gallery-item"><img alt="FOSROC Proofex 3000 membrane on foundation wall" decoding="async" loading="lazy" src="assets/fosroc-proofex-3000-foundation-waterproofing.png"/><div><strong>Foundation Membrane Waterproofing</strong><p>FOSROC Proofex 3000 membrane shown on a foundation wall and base junction.</p></div></article>
-<article class="gallery-item"><img alt="Ceiling plaster damage and repair material preparation" decoding="async" loading="lazy" src="assets/ceiling-leakage-repair.png"/><div><strong>Ceiling Leakage Repair</strong><p>Damaged ceiling plaster and materials prepared for repair work.</p></div></article>
+<article class="gallery-item"><img alt="Brick bat coba work in progress on a roof terrace" decoding="async" loading="lazy" decoding="async" src="assets/brick-bat-coba-work-in-progress.webp"/><div><strong>Brick Bat Coba – Work in Progress</strong><p>Brick-bat laying and mortar application on a terrace.</p></div></article>
+<article class="gallery-item"><img alt="Waterproofing membrane installation on a construction project" decoding="async" loading="lazy" decoding="async" src="assets/membrane-waterproofing-project.webp"/><div><strong>Membrane Waterproofing</strong><p>Membrane installation on a large construction surface.</p></div></article>
+<article class="gallery-item"><img alt="Waterproofing treatment along a roof joint" decoding="async" loading="lazy" decoding="async" src="assets/roof-joint-waterproofing-treatment.webp"/><div><strong>Roof Joint Treatment</strong><p>Waterproofing detail along a roof joint or vulnerable connection.</p></div></article>
+<article class="gallery-item"><img alt="FOSROC Proofex 3000 membrane on foundation wall" decoding="async" loading="lazy" decoding="async" src="assets/fosroc-proofex-3000-foundation-waterproofing.webp"/><div><strong>Foundation Membrane Waterproofing</strong><p>FOSROC Proofex 3000 membrane shown on a foundation wall and base junction.</p></div></article>
+<article class="gallery-item"><img alt="Ceiling plaster damage and repair material preparation" decoding="async" loading="lazy" decoding="async" src="assets/ceiling-leakage-repair.webp"/><div><strong>Ceiling Leakage Repair</strong><p>Damaged ceiling plaster and materials prepared for repair work.</p></div></article>
 </div><div class="gallery-controls"><button aria-label="Previous project photo" id="galleryPrev" type="button">‹</button><button aria-label="Next project photo" id="galleryNext" type="button">›</button></div></div>
 </div>
 </section>
@@ -521,7 +543,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
         ['Brick Bat Coba Waterproofing','Brick Bat Coba terrace treatment. Site condition and drainage are checked before work is recommended.']
       ];
       function showSlide(n){ if(!slides.length)return; current=(n+slides.length)%slides.length; slides.forEach((el,i)=>{el.classList.toggle('active',i===current);el.setAttribute('aria-hidden',i===current?'false':'true')}); dots.forEach((el,i)=>el.classList.toggle('active',i===current)); const info=slideInfo[current]||slideInfo[0]; const title=document.getElementById('slideServiceTitle'); const desc=document.getElementById('slideServiceDescription'); if(title)title.textContent=info[0]; if(desc)desc.textContent=info[1]; }
-      function restart(){if(timer)clearInterval(timer);timer=setInterval(()=>showSlide((current+1)%slides.length),4000)}
+      function restart(){clearInterval(timer); if(slides.length>1){timer=setInterval(()=>{showSlide((current+1)%slides.length)},4000)}}
       document.getElementById('heroPrev')?.addEventListener('click',()=>{showSlide(current-1);restart()});
       document.getElementById('heroNext')?.addEventListener('click',()=>{showSlide(current+1);restart()});
       dots.forEach((el,i)=>el.addEventListener('click',()=>{showSlide(i);restart()}));
@@ -603,3 +625,94 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 </style>
 </body>
 </html>
+
+<style id="premium-slider-overlay-fix">
+/* Premium slider: no blurred duplicate side panels; image remains undistorted. */
+.hero-slider{background:#082b59!important;overflow:hidden!important}
+.hero-slides{width:100%!important;height:clamp(340px,48vw,620px)!important;aspect-ratio:auto!important;max-height:620px!important;min-height:0!important;background:#082b59!important;overflow:hidden!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide img{width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;background:#082b59!important;filter:none!important;transform:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important;filter:none!important}
+.slide-overlay{position:absolute;z-index:3;left:clamp(18px,5vw,64px);bottom:clamp(34px,5vw,58px);width:min(470px,calc(100% - 110px));padding:clamp(14px,2vw,24px);border:1px solid rgba(255,255,255,.3);border-radius:18px;background:linear-gradient(115deg,rgba(5,30,66,.94),rgba(5,49,91,.82));box-shadow:0 12px 32px rgba(0,0,0,.24);color:#fff;backdrop-filter:blur(3px)}
+.slide-kicker{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:800;letter-spacing:1.6px;color:#bfeeff;margin-bottom:7px}
+.slide-overlay h2{margin:0 0 7px;color:#fff;font-size:clamp(19px,2.5vw,32px);line-height:1.13;letter-spacing:-.4px;text-shadow:0 2px 8px rgba(0,0,0,.2)}
+.slide-overlay p{margin:0 0 14px;color:#edf6ff;font-size:clamp(12px,1.3vw,16px);line-height:1.45}
+.slide-quote{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:10px;background:#0a83c2;border:1px solid rgba(255,255,255,.85);color:#fff!important;text-decoration:none;font-size:14px;font-weight:800;box-shadow:0 5px 14px rgba(0,0,0,.18)}
+.slide-quote:hover{background:#086aa0}
+.slider-arrow{z-index:5!important}.slider-dots{z-index:5!important;bottom:12px!important}
+/* The first slide is the branded poster: deliberately no overlay so all poster text remains visible. */
+.hero-slide:first-child .slide-overlay{display:none!important}
+@media(max-width:650px){.hero-slides{height:clamp(300px,68vw,430px)!important;aspect-ratio:auto!important}.slide-overlay{left:12px;bottom:30px;width:min(340px,calc(100% - 72px));padding:12px;border-radius:13px}.slide-overlay h2{font-size:18px}.slide-overlay p{font-size:12px;margin-bottom:10px}.slide-quote{padding:8px 12px;font-size:12px}.slider-dots{bottom:8px!important}}
+</style>
+
+<style id="kushwaha-final-clean-slider-override">
+/* Final override: blur was baked into the original slide image files, so those assets are cleaned; keep a compact 16:9 frame. */
+.hero-slider{position:relative!important;width:100%!important;overflow:hidden!important;background:#082b59!important;margin:0!important;padding:0!important;filter:none!important}
+.hero-slider::before,.hero-slider::after,.hero-slides::before,.hero-slides::after,.hero-slide::before,.hero-slide::after{content:none!important;display:none!important;background-image:none!important;filter:none!important;backdrop-filter:none!important}
+.hero-slides{position:relative!important;width:100%!important;height:clamp(300px,40vw,540px)!important;max-height:540px!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important;opacity:0;visibility:hidden}
+.hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
+.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;background:#082b59!important;filter:none!important;transform:none!important;box-shadow:none!important}
+.hero-slide .slide-overlay{position:absolute!important;z-index:3!important;left:clamp(14px,4vw,48px)!important;bottom:clamp(32px,4vw,46px)!important;width:min(430px,calc(100% - 90px))!important;padding:clamp(12px,1.6vw,20px)!important;border:1px solid rgba(255,255,255,.3)!important;border-radius:16px!important;background:linear-gradient(110deg,rgba(5,30,66,.96),rgba(5,49,91,.92))!important;backdrop-filter:none!important;box-shadow:0 10px 26px rgba(0,0,0,.22)!important;color:#fff!important}
+.hero-slide:first-child .slide-overlay{display:none!important}
+.slide-overlay h2{font-size:clamp(18px,2.2vw,29px)!important;line-height:1.12!important;margin:0 0 6px!important}
+.slide-overlay p{font-size:clamp(12px,1.2vw,15px)!important;line-height:1.4!important;margin:0 0 10px!important}
+.slide-quote{padding:9px 14px!important;font-size:13px!important}
+.slider-arrow{z-index:5!important}.slider-dots{z-index:5!important;bottom:10px!important}
+@media(max-width:650px){.hero-slides{height:clamp(300px,68vw,420px)!important;max-height:420px!important}.hero-slide .slide-overlay{left:12px!important;bottom:32px!important;width:min(300px,calc(100% - 66px))!important;padding:11px!important}.slide-overlay h2{font-size:18px!important}.slide-overlay p{font-size:12px!important}.slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}}
+/* Premium service-card treatment for homepage work slides */
+.hero-slide .slide-overlay{border:1px solid rgba(180,224,255,.58)!important;border-radius:18px!important;background:linear-gradient(135deg,rgba(4,25,58,.97),rgba(7,63,117,.94) 72%,rgba(0,116,177,.92))!important;box-shadow:0 14px 34px rgba(0,15,40,.34),inset 0 1px 0 rgba(255,255,255,.12)!important}
+.hero-slide .slide-kicker{display:inline-block!important;padding:5px 9px!important;border:1px solid rgba(160,222,255,.4)!important;border-radius:999px!important;background:rgba(17,145,205,.18)!important;color:#c7f0ff!important;font-weight:900!important;letter-spacing:1px!important}
+.hero-slide .slide-overlay h2{letter-spacing:-.45px!important;text-wrap:balance!important}
+.hero-slide .slide-overlay p{max-width:42ch!important}
+.slide-highlights{display:flex!important;flex-wrap:wrap!important;gap:6px!important;margin:0 0 13px!important}
+.slide-highlights span{display:inline-flex!important;align-items:center!important;gap:4px!important;padding:5px 8px!important;border-radius:7px!important;background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important;color:#f1f9ff!important;font-size:clamp(10px,.85vw,12px)!important;font-weight:700!important;line-height:1.2!important}
+.hero-slide .slide-quote{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:10px 15px!important;border-radius:10px!important;background:linear-gradient(135deg,#12a5df,#0870b9)!important;color:#fff!important;text-decoration:none!important;font-weight:900!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:0 5px 14px rgba(0,0,0,.18)!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.hero-slide .slide-quote:hover{transform:translateY(-1px)!important;box-shadow:0 8px 18px rgba(0,0,0,.25)!important}
+</style>
+
+<style id="mobile-overlay-visibility-fix">
+/* Mobile-only change: keep the current photo/frame, but make the text card compact so it covers less of the real work photo. */
+@media (max-width: 650px) {
+  .hero-slide .slide-overlay {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 28px !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 9px 11px !important;
+    border-radius: 11px !important;
+    background: rgba(4, 31, 66, .84) !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,.16) !important;
+    backdrop-filter: none !important;
+  }
+  .hero-slide .slide-kicker {
+    font-size: 8px !important;
+    line-height: 1.15 !important;
+    letter-spacing: .7px !important;
+    padding: 3px 7px !important;
+    margin-bottom: 4px !important;
+  }
+  .hero-slide .slide-overlay h2 {
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 4px !important;
+  }
+  .hero-slide .slide-overlay p {
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 6px !important;
+    max-width: 100% !important;
+  }
+  .hero-slide .slide-highlights {
+    display: none !important;
+  }
+  .hero-slide .slide-quote {
+    padding: 6px 9px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    border-radius: 8px !important;
+  }
+  .slider-dots { bottom: 6px !important; }
+}
+</style>
