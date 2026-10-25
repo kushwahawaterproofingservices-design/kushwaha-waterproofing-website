@@ -745,3 +745,11 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
   .slider-dots { bottom: 6px !important; }
 }
 </style>
+
+<style id="laptop-slider-size-adjustment">
+/* Laptop/desktop only: reduce hero slider height so the full poster is easier to see without scrolling. Mobile remains unchanged. */
+@media (min-width: 651px) {
+  #heroSlides.hero-slides, .hero-slides { height: clamp(260px, 30vw, 420px) !important; max-height: 420px !important; min-height: 0 !important; aspect-ratio: 16 / 9 !important; }
+  #heroSlides .hero-slide:first-child > img { object-fit: contain !important; object-position: center center !important; background: #fff !important; }
+}
+</style>
