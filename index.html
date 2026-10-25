@@ -753,3 +753,13 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
   #heroSlides .hero-slide:first-child > img { object-fit: contain !important; object-position: center center !important; background: #fff !important; }
 }
 </style>
+
+<style id="final-laptop-slider-correction">
+/* Final override: comfortable laptop height and never crop the first promotional poster. */
+@media (min-width: 651px) {
+  #heroSlides.hero-slides, .hero-slides { height: clamp(360px, 34vw, 480px) !important; max-height: 480px !important; min-height: 360px !important; aspect-ratio: auto !important; overflow: hidden !important; background: #fff !important; }
+  #heroSlides .hero-slide, .hero-slides .hero-slide { height: 100% !important; }
+  #heroSlides .hero-slide > img, .hero-slides .hero-slide > img { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; object-fit: contain !important; object-position: center center !important; background: #fff !important; }
+  #heroSlides .hero-slide:first-child > img, .hero-slides .hero-slide:first-child > img { object-fit: contain !important; object-position: center center !important; background: #fff !important; }
+}
+</style>
