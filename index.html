@@ -330,6 +330,34 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 .hero-slides{overflow:hidden!important}
 .hero-slide:first-child{overflow:hidden!important}
 .hero-slide:first-child>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important}
+
+
+/* Final mobile hero text-box adjustment: keep the photo visible behind the copy and use a lighter, cleaner box. Desktop and other sections are untouched. */
+@media (max-width: 650px) {
+  .hero-slide .slide-copy {
+    display: block !important;
+    position: absolute !important;
+    left: 18px !important;
+    right: auto !important;
+    bottom: 13% !important;
+    top: auto !important;
+    width: auto !important;
+    max-width: 82% !important;
+    box-sizing: border-box !important;
+    padding: 12px 14px !important;
+    border: 1px solid rgba(255,255,255,.42) !important;
+    border-radius: 14px !important;
+    background: rgba(5, 35, 75, .58) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+    backdrop-filter: blur(2px) !important;
+    box-shadow: 0 5px 16px rgba(0,0,0,.16) !important;
+    color: #fff !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,.55) !important;
+  }
+  .hero-slide .slide-copy h1 { font-size: clamp(20px, 5.4vw, 27px) !important; line-height: 1.12 !important; margin: 6px 0 9px !important; }
+  .hero-slide .slide-copy p { font-size: 12px !important; line-height: 1.4 !important; margin: 0 0 10px !important; }
+  .hero-slide .slide-copy .eyebrow { background: rgba(255,255,255,.14) !important; border-color: rgba(255,255,255,.4) !important; }
+}
 </style>
 </head>
 <body>
