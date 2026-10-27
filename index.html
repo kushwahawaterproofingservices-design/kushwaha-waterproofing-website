@@ -5,10 +5,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Kushwaha Waterproofing Services | Waterproofing Experts in Chandigarh, Mohali &amp; Panchkula</title>
-<meta name="description" content="Kushwaha Waterproofing Services provides roof and terrace waterproofing, PU coating, injection grouting, bathroom leakage repair, PU injection grouting, Self-Text and HDPE membrane waterproofing, Brick Bat Coba and protective coatings in Chandigarh, Mohali and Panchkula. Call 9888828636 for a site visit and quote."/>
+<meta name="description" content="Kushwaha Waterproofing Services provides roof and terrace waterproofing, PU coating, injection grouting, bathroom leakage repair, wall seepage, Brick Bat Coba, APP membrane and protective coatings in Chandigarh, Mohali and Panchkula. Call 9888828636 for a site visit and quote."/>
 <meta content="#082f62" name="theme-color"/>
 <meta content="https://kushwahawaterproofingservice.com/" property="og:url"/>
-<meta content="https://kushwahawaterproofingservice.com/assets/roof-before-after.webp" property="og:image"/>
+<meta content="https://kushwahawaterproofingservice.com/assets/roof-before-after.jpg" property="og:image"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://kushwahawaterproofingservice.com/" rel="canonical"/>
 <meta content="Kushwaha Waterproofing Services" property="og:title"/>
@@ -61,7 +61,7 @@
     .hero-slider{position:relative;background:#062b5a;overflow:hidden}
     /* Keep the hero banner a controlled size on laptop/desktop instead of letting
        the source image's natural height take over the whole screen. */
-    .hero-slides{position:relative;width:100%;aspect-ratio:16/9;height:auto;min-height:0;max-height:620px;overflow:hidden;contain:layout paint}
+    .hero-slides{position:relative;width:100%;aspect-ratio:16/9;height:auto;min-height:0;max-height:620px;overflow:hidden}
     .hero-slide{position:absolute;inset:0;width:100%;height:100%;opacity:0;visibility:hidden;transition:opacity .8s ease;display:flex;align-items:center;justify-content:center;overflow:hidden;border:0;outline:0}
     .hero-slide.active{opacity:1;visibility:visible;position:absolute}
     .hero-slide img{width:100%!important;max-width:none!important;height:100%;object-fit:contain!important;object-position:center;display:block;background:#062b5a;border:0;outline:0;box-shadow:none}
@@ -70,7 +70,7 @@
     .slide-copy h1{font-size:clamp(26px,4.2vw,52px);line-height:1.05;color:#fff;margin:0 0 12px;letter-spacing:-.8px}
     .slide-copy p{font-size:clamp(13px,1.5vw,18px);margin:0 0 18px;color:#eef8ff;max-width:560px}
     .slide-copy .eyebrow{background:#ffffff20;border-color:#ffffff65;color:#fff}
-    .slider-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:44px;height:44px;min-width:44px;min-height:44px;border:1px solid #ffffff70;border-radius:50%;background:#062951b8;color:#fff;font-size:26px;cursor:pointer;display:grid;place-items:center}
+    .slider-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid #ffffff70;border-radius:50%;background:#062951b8;color:#fff;font-size:26px;cursor:pointer;display:grid;place-items:center}
     .slider-arrow.prev{left:18px}.slider-arrow.next{right:18px}
     .slider-dots{position:absolute;z-index:4;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:9px}
     .slider-dot{width:10px;height:10px;padding:0;border:1px solid white;border-radius:50%;background:#ffffff80;cursor:pointer}.slider-dot.active{background:#fff;transform:scale(1.25)}
@@ -118,29 +118,11 @@
 @media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;height:auto!important;max-height:none!important}.hero-slide img{object-fit:cover!important}.hero-slider + section{margin-top:0!important}}
 
 
-/* Minimal fix: show the entire first promotional poster inside the existing slider frame; do not change frame size or other slides. */
-.hero-slides > .hero-slide:first-child img{width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;flex:0 1 auto!important;}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
+/* User-requested visibility fixes: keep the existing layout and dimensions. */
+.all-types, .all-types strong, .all-types .wrap > div > strong { color:#fff !important; }
+.all-types p { color:#f4faff !important; }
+.hero-slide .slide-overlay { background:rgba(5,29,62,.58) !important; border:1px solid rgba(255,255,255,.55) !important; box-shadow:0 6px 20px rgba(0,0,0,.18) !important; backdrop-filter:blur(1px) !important; }
+.hero-slide .slide-overlay h2, .hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker { color:#fff !important; }
 </style>
 <style>
 /* Final responsive polish: navy, clean white, teal and restrained gold across the full site */
@@ -174,27 +156,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid #64c8d5!important;bord
 .slider-dots{z-index:5}
 .service-photo{width:100%!important;aspect-ratio:16/9!important;height:auto!important;object-fit:cover!important;object-position:center!important;background:#eef4f8!important}
 @media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.hero-slide img{object-fit:contain!important}.topbar{font-size:11px!important}.topbar .wrap{gap:7px!important}.service-card{padding:18px!important}}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
 </style>
 <style id="kushwaha-final-brand-palette">
 :root{--blue:#123F78;--blue2:#1D5FA7;--cyan:#1D5FA7;--gold:#1D5FA7;--ink:#172B43;--muted:#5F6B7A;--pale:#F4F6F8;--line:#DCE2E8;--white:#FFFFFF}
@@ -221,27 +182,6 @@ footer{background:#123F78!important;color:#FFFFFF!important}footer a{color:#FFFF
 input,select,textarea{border-color:#C9D2DC!important}
 input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;border-color:#1D5FA7!important}
 .hero-slider,.hero-slide img,.service-photo{background:#F4F6F8!important}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
 </style>
 <style>
 
@@ -259,33 +199,59 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 .service-card .service-photo{width:100%;height:220px;object-fit:cover;object-position:center;display:block}
 @media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.hero-slide img{object-fit:contain!important}.hero-slide .slide-copy{left:12px!important;bottom:34px!important;max-width:78%!important;padding:10px!important}.hero-slide .slide-copy h1{font-size:clamp(18px,5vw,26px)!important;margin:5px 0 6px!important}.hero-slide .slide-copy p{font-size:12px!important;margin-bottom:8px!important}.hero-slide .slide-copy .btn{font-size:12px!important;padding:8px 10px!important}.slider-dots{bottom:8px!important}}
 
+</style>
 
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
+<style id="original-photo-slider-fix">
+/* Use the original site photos only: no blurred side-fill, no crop, no text over photos. */
+.hero-slider{background:#f4f6f8!important;overflow:hidden!important;padding:0!important;margin:0!important}
+.hero-slides{position:relative!important;width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;background:#f4f6f8!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .45s ease!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+.hero-slide img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;background:#f4f6f8!important;filter:none!important;transform:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important}
+.hero-slide .slide-copy{display:none!important}
+.slider-arrow{z-index:5!important}
+.slider-dots{z-index:5!important;bottom:10px!important}
+.slide-details{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:20px clamp(16px,4vw,48px);background:#fff;border-bottom:1px solid #dce5ee}
+.slide-details-copy{min-width:0;flex:1 1 260px}
+.slide-details h2{margin:0 0 6px;color:#103b70;font-size:clamp(20px,2.4vw,30px);line-height:1.2}
+.slide-details p{margin:0;color:#43566b;font-size:clamp(14px,1.5vw,17px);line-height:1.5}
+.slide-details .btn{flex:0 0 auto;background:#087dbb!important;color:#fff!important;border:1px solid #087dbb!important;padding:12px 22px!important;font-weight:800}
+@media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.slide-details{padding:16px;gap:12px}.slide-details .btn{width:100%;text-align:center;justify-content:center}.slider-arrow{width:34px!important;height:34px!important;font-size:22px!important}.slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}}
 
+/* Final hero slider fixes: use original full-width photos, no blurred side copies */
+.hero-slider{background:#062b5a!important;overflow:hidden!important}
+.hero-slides{position:relative!important;width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;background:#062b5a!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;opacity:0;visibility:hidden;overflow:hidden!important;background:#062b5a!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important}
+.hero-slide img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important;background:#062b5a!important;filter:none!important;transform:none!important;box-shadow:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important;background:none!important;filter:none!important}
+.hero-slide .slide-copy{display:none!important}
+.slide-details{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;flex-wrap:wrap!important;padding:20px clamp(16px,4vw,48px)!important;background:#fff!important;border-bottom:1px solid #dce5ee!important}
+.slide-details-copy{min-width:0!important;flex:1 1 260px!important}
+.slide-details h2{margin:0 0 6px!important;color:#103b70!important;font-size:clamp(20px,2.4vw,30px)!important;line-height:1.2!important}
+.slide-details p{margin:0!important;color:#43566b!important;font-size:clamp(14px,1.5vw,17px)!important;line-height:1.5!important}
+.slide-details .btn{flex:0 0 auto!important;background:#087dbb!important;color:#fff!important;border:1px solid #087dbb!important;padding:12px 22px!important;font-weight:800!important}
+@media(max-width:650px){.hero-slides{aspect-ratio:16/9!important;max-height:none!important}.slide-details{padding:16px!important;gap:12px!important}.slide-details .btn{width:100%!important;text-align:center!important;justify-content:center!important}.slider-arrow{width:34px!important;height:34px!important;font-size:22px!important}.slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}}
 </style>
 
 
-
-
-
+<style id="final-slider-size-fix">
+/* Final correction: compact responsive slider; full original image, no blur and no crop. */
+.hero-slider{width:100%!important;background:#082a55!important;overflow:hidden!important;padding:0!important;margin:0!important}
+.hero-slides{position:relative!important;width:100%!important;height:min(56vh,520px)!important;min-height:300px!important;max-height:520px!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082a55!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082a55!important}
+.hero-slide img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important;background:#082a55!important;filter:none!important;transform:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important;filter:none!important;background:none!important}
+.hero-slide .slide-copy{display:none!important}
+.slider-dots{bottom:10px!important;z-index:6!important}
+.slider-arrow{z-index:6!important}
+.slide-details{position:relative!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;padding:20px clamp(16px,4vw,48px)!important;background:#f4f8fc!important}
+.slide-details-copy{min-width:0!important}
+.slide-details h2{margin:0 0 6px!important;color:#0b315f!important;font-size:clamp(19px,2.4vw,28px)!important;line-height:1.2!important}
+.slide-details p{margin:0!important;color:#40536b!important;line-height:1.5!important}
+@media(max-width:650px){.hero-slides{height:38vh!important;min-height:220px!important;max-height:340px!important;aspect-ratio:auto!important}.slide-details{padding:14px 16px!important;align-items:stretch!important;flex-direction:column!important;gap:10px!important}.slide-details .btn{width:100%!important;justify-content:center!important;text-align:center!important}}
+</style>
 <style>
 
 /* FINAL SLIDER OVERRIDE: remove blurred side-image effects and keep source photos intact */
@@ -312,33 +278,53 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
  .slider-dots{bottom:7px!important}
 }
 
+</style>
 
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
+<style id="final-hero-slider-fix">
+/* One authoritative slider rule: no blurred duplicate backgrounds, consistent restrained size. */
+.hero-slider{position:relative!important;overflow:hidden!important;background:#09264b!important;margin:0!important;padding:0!important;filter:none!important}
+.hero-slider::before,.hero-slider::after,.hero-slides::before,.hero-slides::after,.hero-slide::before,.hero-slide::after{content:none!important;display:none!important;filter:none!important;backdrop-filter:none!important;background-image:none!important}
+.hero-slides{position:relative!important;display:block!important;width:100%!important;height:clamp(300px,40vw,540px)!important;min-height:0!important;max-height:540px!important;aspect-ratio:auto!important;overflow:hidden!important;background:#09264b!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;opacity:0!important;visibility:hidden!important;background:#09264b!important;filter:none!important;transition:opacity .45s ease!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important;position:absolute!important}
+.hero-slide>img{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important;background:#09264b!important;filter:none!important;transform:none!important;border:0!important;outline:0!important;box-shadow:none!important}
+.hero-slide .slide-overlay{position:absolute!important;z-index:3!important;left:clamp(14px,4vw,52px)!important;bottom:clamp(34px,4vw,50px)!important;width:min(430px,calc(100% - 92px))!important;max-width:calc(100% - 92px)!important;padding:clamp(12px,1.5vw,20px)!important;border:1px solid rgba(255,255,255,.24)!important;border-radius:14px!important;background:linear-gradient(115deg,rgba(5,30,66,.94),rgba(5,49,91,.88))!important;box-shadow:0 10px 26px rgba(0,0,0,.2)!important;color:#fff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.hero-slide:first-child .slide-overlay,.hero-slide:first-child .slide-copy{display:none!important}
+.hero-slide .slide-overlay h2{font-size:clamp(18px,2.1vw,29px)!important;line-height:1.14!important;margin:0 0 7px!important;color:#fff!important;text-shadow:none!important}
+.hero-slide .slide-overlay p{font-size:clamp(12px,1.15vw,15px)!important;line-height:1.42!important;margin:0 0 11px!important;color:#eef7ff!important}
+.hero-slide .slide-kicker{font-size:clamp(9px,.85vw,11px)!important;letter-spacing:1.1px!important;margin-bottom:6px!important;color:#bfeeff!important}
+.hero-slide .slide-quote{display:inline-flex!important;align-items:center!important;gap:7px!important;padding:9px 13px!important;border-radius:9px!important;background:#12a4d6!important;color:#fff!important;font-size:13px!important;font-weight:800!important;text-decoration:none!important;border:1px solid rgba(255,255,255,.7)!important}
+.slider-arrow{z-index:6!important;top:50%!important;background:rgba(5,35,73,.82)!important;backdrop-filter:none!important}
+.slider-dots{z-index:6!important;bottom:9px!important}
+@media(max-width:650px){
+ .hero-slides{height:clamp(290px,66vw,390px)!important;max-height:390px!important}
+ .hero-slide>img{object-fit:contain!important;width:100%!important;height:100%!important}
+ .hero-slide .slide-overlay{left:12px!important;bottom:30px!important;width:min(310px,calc(100% - 70px))!important;max-width:calc(100% - 70px)!important;padding:10px!important;border-radius:11px!important}
+ .hero-slide .slide-overlay h2{font-size:17px!important;margin-bottom:5px!important}
+ .hero-slide .slide-overlay p{font-size:11px!important;line-height:1.35!important;margin-bottom:8px!important}
+ .hero-slide .slide-kicker{font-size:8px!important;margin-bottom:4px!important}
+ .hero-slide .slide-quote{font-size:11px!important;padding:7px 10px!important}
+ .slider-arrow{width:32px!important;height:32px!important;font-size:20px!important}
+ .slider-arrow.prev{left:7px!important}.slider-arrow.next{right:7px!important}
+ .slider-dots{bottom:7px!important;gap:6px!important}
 }
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
 </style>
 
 
-
-
-
+<style id="kws-final-slider-layout">
+.hero-slider{position:relative!important;width:100%!important;overflow:hidden!important;background:#082b59!important;margin:0!important;padding:0!important;filter:none!important}
+.hero-slider::before,.hero-slider::after,.hero-slides::before,.hero-slides::after,.hero-slide::before,.hero-slide::after{content:none!important;display:none!important;background-image:none!important;filter:none!important;backdrop-filter:none!important}
+.hero-slides{position:relative!important;display:block!important;width:100%!important;height:clamp(300px,38vw,520px)!important;min-height:0!important;max-height:520px!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important;opacity:0!important;visibility:hidden!important;filter:none!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
+.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:cover!important;object-position:center center!important;background:#082b59!important;filter:none!important;transform:none!important;box-shadow:none!important;border:0!important}
+.hero-slide .slide-overlay{position:absolute!important;z-index:3!important;left:clamp(14px,4vw,48px)!important;bottom:clamp(30px,4vw,44px)!important;width:min(430px,calc(100% - 90px))!important;max-width:calc(100% - 90px)!important;padding:clamp(12px,1.5vw,20px)!important;border:1px solid rgba(255,255,255,.25)!important;border-radius:15px!important;background:linear-gradient(115deg,rgba(5,30,66,.96),rgba(5,49,91,.92))!important;box-shadow:0 10px 26px rgba(0,0,0,.22)!important;color:#fff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.hero-slide:first-child .slide-overlay,.hero-slide:first-child .slide-copy{display:none!important}
+.hero-slide .slide-overlay h2{font-size:clamp(18px,2.1vw,29px)!important;line-height:1.14!important;margin:0 0 7px!important;color:#fff!important}
+.hero-slide .slide-overlay p{font-size:clamp(12px,1.15vw,15px)!important;line-height:1.42!important;margin:0 0 11px!important;color:#eef7ff!important}
+.hero-slide .slide-quote{display:inline-flex!important;align-items:center!important;padding:9px 13px!important;border-radius:9px!important;background:#12a4d6!important;color:#fff!important;font-size:13px!important;font-weight:800!important;text-decoration:none!important;border:1px solid rgba(255,255,255,.7)!important}
+@media(max-width:650px){.hero-slides{height:clamp(260px,70vw,390px)!important;max-height:390px!important}.hero-slide>img{object-fit:cover!important}.hero-slide .slide-overlay{left:12px!important;bottom:26px!important;width:min(290px,calc(100% - 60px))!important;max-width:calc(100% - 60px)!important;padding:10px!important;border-radius:11px!important}.hero-slide .slide-overlay h2{font-size:16px!important;margin-bottom:5px!important}.hero-slide .slide-overlay p{font-size:11px!important;line-height:1.3!important;margin-bottom:8px!important}.hero-slide .slide-quote{font-size:11px!important;padding:7px 10px!important}}
+</style>
 
 
 <style>
@@ -351,271 +337,91 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
  .hero-slide .slide-copy .btn{display:inline-flex!important;padding:8px 12px!important;margin-top:2px!important;font-size:12px!important;background:#087dbb!important;color:#fff!important;border:1px solid #fff!important;border-radius:10px!important}
  .hero-slide .slide-copy .feature-tags,.hero-slide .slide-copy .slide-features,.hero-slide .slide-copy .benefits{display:none!important}
 }
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
 </style>
 
 
-
+<style id="wide-photo-slider-fix">
+/* Desktop: make every real-work photo span the entire hero frame (no blue side gutters). */
+.hero-slider{background:#062b5a!important}
+.hero-slides{width:100%!important;aspect-ratio:16/9!important;height:auto!important;max-height:620px!important;min-height:0!important;overflow:hidden!important}
+.hero-slide{width:100%!important;height:100%!important;display:flex!important;align-items:stretch!important;justify-content:stretch!important;overflow:hidden!important;background:#062b5a!important}
+.hero-slide img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important}
+/* Keep desktop text panel compact and on top of the photo. */
+@media (min-width:651px){.slide-copy{max-width:min(390px,42%)!important;bottom:9%!important;left:4%!important;padding:14px 16px!important;border-radius:14px!important}}
+/* Mobile keeps its compact frame; text does not have an opaque blue panel. */
+@media (max-width:650px){.hero-slides{aspect-ratio:4/3!important;max-height:none!important}.hero-slide img{object-fit:cover!important}.slide-copy{background:transparent!important;box-shadow:none!important;border:0!important}}
+</style>
   <link rel="icon" type="image/jpeg" href="assets/kushwaha-waterproofing-logo.jpg" />
 
 <!-- Final targeted fixes: consistent slider sizing, no blank side bands, compact photo overlay, correct call SEO. -->
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="mobile-lcp-visibility-fix">
-/* Keep the initially visible hero image paintable for mobile Lighthouse/LCP. */
-@media (max-width: 900px) {
-  #heroSlides > .hero-slide.active { opacity: 1 !important; visibility: visible !important; }
-  #heroSlides > .hero-slide.active img {
-    display: block !important; opacity: 1 !important; visibility: visible !important;
-    width: 100% !important; height: 100% !important; max-width: 100% !important;
-    pointer-events: auto !important; object-position: center center !important;
+<style id="kws-final-targeted-fixes">
+  .hero-slider,.hero-slides { width:100% !important; overflow:hidden !important; }
+  .hero-slides { position:relative !important; height:clamp(320px,42vw,560px) !important; max-height:560px !important; min-height:0 !important; aspect-ratio:auto !important; background:#082b59 !important; }
+  .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; display:flex !important; align-items:stretch !important; justify-content:stretch !important; overflow:hidden !important; }
+  .hero-slide > img { display:block !important; width:100% !important; height:100% !important; max-width:none !important; max-height:none !important; object-fit:cover !important; object-position:center center !important; background:transparent !important; filter:none !important; transform:none !important; }
+  /* The first promotional poster now fills the same slide frame as the real-work photos. */
+  .hero-slide:first-child > img { object-fit:cover !important; object-position:center center !important; background:transparent !important; }
+  .hero-slide:before,.hero-slide:after,.hero-slides:before,.hero-slides:after { display:none !important; content:none !important; }
+  .hero-slide .slide-overlay { background:transparent !important; border:0 !important; box-shadow:none !important; backdrop-filter:none !important; text-shadow:0 2px 5px rgba(0,0,0,.9) !important; }
+  .hero-slide .slide-overlay h2,.hero-slide .slide-overlay p,.hero-slide .slide-kicker,.hero-slide .slide-highlights span { text-shadow:0 2px 5px rgba(0,0,0,.9) !important; }
+  .hero-slide .slide-overlay .slide-kicker { background:rgba(0,0,0,.35) !important; color:#fff !important; border-color:rgba(255,255,255,.5) !important; }
+  .hero-slide .slide-quote { box-shadow:none !important; }
+  @media(max-width:650px) {
+    .hero-slides { height:clamp(300px,68vw,420px) !important; max-height:420px !important; aspect-ratio:auto !important; }
+    .hero-slide > img,.hero-slide:first-child > img { object-fit:cover !important; object-position:center center !important; }
+    .hero-slide .slide-overlay { left:12px !important; bottom:26px !important; width:min(300px,calc(100% - 64px)) !important; max-width:calc(100% - 64px) !important; padding:0 !important; border-radius:0 !important; background:transparent !important; }
+    .hero-slide .slide-overlay h2 { font-size:17px !important; line-height:1.15 !important; }
+    .hero-slide .slide-overlay p { font-size:11px !important; line-height:1.35 !important; }
   }
-}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
 </style>
 
 
-
-
-
-
-
-
-<style id="authoritative-responsive-slider-fix">
-/* Single source of truth: same responsive 16:9 frame across phone, tablet, laptop and desktop. */
-#heroSlides.hero-slides{
-  position:relative!important; display:block!important; width:100%!important;
-  aspect-ratio:16/9!important; height:auto!important; min-height:0!important; max-height:none!important;
-  overflow:hidden!important; background:#fff!important; margin-inline:auto!important;
-}
-#heroSlides .hero-slide{
-  position:absolute!important; inset:0!important; display:flex!important; align-items:center!important;
-  justify-content:center!important; width:100%!important; height:100%!important; padding:0!important;
-  overflow:hidden!important; background:#fff!important; opacity:0; visibility:hidden;
-}
-#heroSlides .hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
-#heroSlides .hero-slide>img{
-  display:block!important; flex:0 0 100%!important; width:100%!important; height:100%!important;
-  min-width:0!important; min-height:0!important; max-width:none!important; max-height:none!important;
-  margin:0!important; padding:0!important; object-fit:cover!important; object-position:center center!important;
-  border:0!important; transform:none!important; filter:none!important;
-}
-/* Keep the promotional poster complete and undistorted. */
-#heroSlides .hero-slide:first-child>img{object-fit:contain!important;background:#fff!important}
-#heroSlides .slide-overlay{z-index:3!important;max-width:min(390px,calc(100% - 100px))!important}
-#heroSlides .slider-arrow,#heroSlides .slider-dots{z-index:5!important}
-@media(max-width:650px){
- #heroSlides.hero-slides{width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:0!important;max-height:none!important}
- #heroSlides .slide-overlay{left:12px!important;bottom:28px!important;width:min(280px,calc(100% - 72px))!important;max-width:calc(100% - 72px)!important;padding:10px!important}
- #heroSlides .slide-overlay h2{font-size:clamp(14px,4vw,18px)!important;line-height:1.15!important}
- #heroSlides .slide-overlay p{font-size:clamp(10px,2.8vw,12px)!important;line-height:1.3!important}
-}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
+<style id="hero-slider-consistent-image-fit">
+/* Match all slides to the original work-photo frame without cropping the company poster. */
+#heroSlides.hero-slides { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:620px !important; overflow:hidden !important; background:transparent !important; }
+#heroSlides .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; overflow:hidden !important; background:transparent !important; }
+#heroSlides .hero-slide img { display:block !important; width:100% !important; max-width:100% !important; height:100% !important; margin:0 !important; padding:0 !important; border:0 !important; object-fit:contain !important; object-position:center center !important; background:transparent !important; }
+/* Remove the blue patterned banner below the slider. Keep only plain blue text. */
+.all-types { background:transparent !important; background-image:none !important; color:#0b3b70 !important; padding:14px 0 !important; border:0 !important; box-shadow:none !important; }
+.all-types::before,.all-types::after,.all-types .wrap::before,.all-types .wrap::after { display:none !important; content:none !important; background:none !important; }
+.all-types strong,.all-types p { color:#0b3b70 !important; text-shadow:none !important; }
+.all-types .btn { display:none !important; }
+@media(max-width:650px) { #heroSlides.hero-slides { aspect-ratio:16/9 !important; height:auto !important; max-height:420px !important; } #heroSlides .hero-slide img { object-fit:contain !important; } .all-types { padding:10px 0 !important; } }
 </style>
 
-<style id="final-slider-viewport-fix">
-/* Keep the hero slider comfortably visible in the laptop's first viewport. */
-@media (min-width: 651px) {
-  #heroSlides.hero-slides { height: clamp(320px, 34vw, 420px) !important; min-height: 0 !important; max-height: 420px !important; aspect-ratio: auto !important; margin-top: 0 !important; margin-bottom: 0 !important; }
-  #heroSlides .hero-slide { height: 100% !important; }
-  #heroSlides .hero-slide > img { width: 100% !important; height: 100% !important; object-fit: contain !important; object-position: center center !important; }
-  .hero-slider { margin-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; }
-}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
+<style id="slider-loop-tile-fix">
+/* Consistent 16:9 slider: real site photos fill the same frame without blue side gaps. */
+.hero-slider { background: #fff !important; }
+.hero-slides { width: 100% !important; aspect-ratio: 16 / 9 !important; height: auto !important; max-height: 620px !important; min-height: 0 !important; overflow: hidden !important; }
+.hero-slide { inset: 0 !important; width: 100% !important; height: 100% !important; overflow: hidden !important; }
+.hero-slide img { display: block !important; width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; object-fit: cover !important; object-position: center center !important; background: transparent !important; }
+/* Keep the company poster uncropped because it contains contact information. */
+.hero-slide:first-child img { object-fit: contain !important; background: #fff !important; }
+/* The lower service line should be text only, with no blue banner or button. */
+.all-types { background: #fff !important; color: #0B1F4D !important; padding: 12px 0 !important; }
+.all-types .wrap { justify-content: center !important; }
+.all-types strong { color: #0B1F4D !important; }
+.all-types p { color: #0B1F4D !important; }
+.all-types .btn { display: none !important; }
+@media (max-width: 767px) { .hero-slides { aspect-ratio: 4 / 3 !important; max-height: none !important; } .hero-slide:first-child img { object-fit: contain !important; } }
 </style>
 
-<style id="first-poster-fit-only">
-/* Minimal fix: keep the existing slider size; fit the entire first poster inside its current frame. */
-.hero-slides{overflow:hidden!important}
-.hero-slide:first-child{overflow:hidden!important}
-.hero-slide:first-child>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important}
 
-
-/* Final mobile hero text-box adjustment: keep the photo visible behind the copy and use a lighter, cleaner box. Desktop and other sections are untouched. */
-@media (max-width: 650px) {
-  .hero-slide .slide-copy {
-    display: block !important;
-    position: absolute !important;
-    left: 18px !important;
-    right: auto !important;
-    bottom: 13% !important;
-    top: auto !important;
-    width: auto !important;
-    max-width: 82% !important;
-    box-sizing: border-box !important;
-    padding: 12px 14px !important;
-    border: 1px solid rgba(255,255,255,.42) !important;
-    border-radius: 14px !important;
-    background: rgba(5, 35, 75, .58) !important;
-    -webkit-backdrop-filter: blur(2px) !important;
-    backdrop-filter: blur(2px) !important;
-    box-shadow: 0 5px 16px rgba(0,0,0,.16) !important;
-    color: #fff !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,.55) !important;
-  }
-  .hero-slide .slide-copy h1 { font-size: clamp(20px, 5.4vw, 27px) !important; line-height: 1.12 !important; margin: 6px 0 9px !important; }
-  .hero-slide .slide-copy p { font-size: 12px !important; line-height: 1.4 !important; margin: 0 0 10px !important; }
-  .hero-slide .slide-copy .eyebrow { background: rgba(255,255,255,.14) !important; border-color: rgba(255,255,255,.4) !important; }
-}
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
-</style>
-
-<style id="final-mobile-text-visibility-fix">
-/* Keep the hero photo visible behind the text without an opaque blue panel. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.48) !important;
-  border: 1px solid rgba(255,255,255,0.32) !important;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.12) !important;
-  backdrop-filter: blur(1px) !important;
-  -webkit-backdrop-filter: blur(1px) !important;
-}
-.hero-slide .slide-overlay h2, #heroSlides .slide-overlay h2,
-.hero-slide .slide-overlay p, #heroSlides .slide-overlay p,
-.hero-slide .slide-overlay .slide-kicker, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.85) !important;
-}
-/* Make the section heading readable on the blue gradient on both mobile and laptop. */
-.all-types, .all-types .wrap, .all-types .wrap > div { color: #fff !important; }
-.all-types strong, .all-types .wrap strong {
-  display: block !important; color: #fff !important; opacity: 1 !important;
-  visibility: visible !important; text-shadow: 0 1px 3px rgba(0,0,0,0.28) !important;
-}
-.all-types p { color: #eef7ff !important; opacity: 1 !important; }
+<style id="reviewed-slider-fix-20261020">
+/* Keep all slides in one stable frame; show the whole company poster, and let work photos fill the frame. */
+.hero-slider { width:100% !important; overflow:hidden !important; background:#fff !important; }
+#heroSlides.hero-slides { position:relative !important; display:block !important; width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:560px !important; overflow:hidden !important; background:#fff !important; }
+#heroSlides .hero-slide { position:absolute !important; inset:0 !important; width:100% !important; height:100% !important; overflow:hidden !important; }
+#heroSlides .hero-slide > img { display:block !important; width:100% !important; height:100% !important; max-width:none !important; max-height:none !important; object-fit:cover !important; object-position:center center !important; background:transparent !important; }
+#heroSlides .hero-slide:first-child > img { object-fit:contain !important; object-position:center center !important; background:#fff !important; }
+#heroSlides .hero-slide.active { opacity:1 !important; visibility:visible !important; z-index:1 !important; }
+#heroSlides .slider-arrow, #heroSlides .slider-dots { z-index:7 !important; }
 @media (max-width:650px) {
- .hero-slide .slide-overlay, #heroSlides .slide-overlay { background: rgba(5,35,73,0.48) !important; }
- .all-types strong, .all-types .wrap strong { font-size: 22px !important; line-height: 1.35 !important; }
+ #heroSlides.hero-slides { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; min-height:0 !important; max-height:420px !important; }
+ #heroSlides .hero-slide > img { object-fit:cover !important; }
+ #heroSlides .hero-slide:first-child > img { object-fit:contain !important; background:#fff !important; }
 }
-
-/* ONLY the two requested visibility fixes: translucent hero text panel and readable all-types heading. */
-.hero-slide .slide-overlay, #heroSlides .slide-overlay {
-  background: rgba(5, 35, 73, 0.24) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.38) !important;
-}
-.hero-slide .slide-overlay h1, .hero-slide .slide-overlay h2,
-.hero-slide .slide-overlay p, .hero-slide .slide-overlay .slide-kicker,
-#heroSlides .slide-overlay h1, #heroSlides .slide-overlay h2,
-#heroSlides .slide-overlay p, #heroSlides .slide-overlay .slide-kicker {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-.all-types strong, .all-types .wrap strong {
-  color: #fff !important; opacity: 1 !important; visibility: visible !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
-}
-.all-types p { color: #f4f9ff !important; opacity: 1 !important; }
-
 </style>
 </head>
 <body>
@@ -633,47 +439,43 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <section aria-label="Kushwaha Waterproofing Services featured banners" class="hero-slider">
 <div class="hero-slides" id="heroSlides">
 <article class="hero-slide active">
-<img alt="Kushwaha Waterproofing Services promotional poster" fetchpriority="high" loading="eager" src="assets/kushwaha-promotional-poster.webp"/>
+<img alt="Kushwaha Waterproofing Services promotional poster" fetchpriority="high" loading="eager" src="assets/kushwaha-promotional-poster.jpg"/>
 </article>
 <article class="hero-slide">
-<img alt="APP Bitumen Membrane Waterproofing" loading="lazy" decoding="async" src="assets/app-bitumen-membrane-waterproofing.webp"/>
-<div class="slide-overlay"><span class="slide-kicker">APP MEMBRANE WATERPROOFING</span><h2>App Membrane Waterproofing</h2><p>Membrane sheet installation with attention to overlaps and sealed joints.</p><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Roof bituminous waterproofing work" loading="lazy" src="assets/roof-before-after.jpg"/><div class="slide-overlay"><span class="slide-kicker">ROOF CARE · WEATHER DEFENCE</span><h2>Roof Bituminous Coating</h2><p>A protective roof layer planned around the surface and site conditions.</p><div class="slide-highlights"><span>✓ Surface-specific system</span><span>✓ Neat application</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Real roof bituminous coating work" loading="lazy" decoding="async" src="assets/roof-bituminous-coating-work.webp"/>
-<div class="slide-overlay"><span class="slide-kicker">ROOF BITUMINOUS COATING</span><h2>Roof Bituminous Coating</h2><p>Bituminous coating applied on the roof surface.</p><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="APP bitumen membrane waterproofing work" loading="lazy" src="assets/app-bitumen-membrane-waterproofing.png"/><div class="slide-overlay"><span class="slide-kicker">APP MEMBRANE · ROOF PROTECTION</span><h2>APP Membrane Waterproofing</h2><p>Membrane sheet installation with attention to overlaps, edges and detailing.</p><div class="slide-highlights"><span>✓ Carefully sealed joints</span><span>✓ Roof &amp; terrace use</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Ceiling leakage repair work" loading="lazy" decoding="async" src="assets/ceiling-leakage-repair.webp"/>
-<div class="slide-overlay"><span class="slide-kicker">CEILING LEAKAGE REPAIR</span><h2>Ceiling Leakage Repair</h2><p>Leakage repair and treatment for damaged ceiling areas.</p><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Roof surface preparation before waterproofing" loading="lazy" src="assets/roof-waterproofing-surface-preparation.png"/><div class="slide-overlay"><span class="slide-kicker">STEP 01 · THE RIGHT START</span><h2>Surface Preparation</h2><p>Cleaning and preparing the roof so the waterproofing system can bond properly.</p><div class="slide-highlights"><span>✓ Clean surface</span><span>✓ Ready for treatment</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="Roof waterproofing surface preparation before and after" loading="lazy" decoding="async" src="assets/roof-waterproofing-surface-preparation.webp"/>
-<div class="slide-overlay"><span class="slide-kicker">ROOF WATERPROOFING · SURFACE PREPARATION</span><h2>Roof Waterproofing · Surface Preparation</h2><p>Roof surface preparation before waterproofing treatment.</p><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Terrace protective coating before and after waterproofing" loading="lazy" src="assets/terrace-checkerboard-finish-before-after.png"/><div class="slide-overlay"><span class="slide-kicker">TERRACE CARE · FINISHING</span><h2>Protective Terrace Coating</h2><p>A protective finish selected to suit the terrace surface and project requirements.</p><div class="slide-highlights"><span>✓ Even coating finish</span><span>✓ Site-based selection</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="hero-slide">
-<img alt="HDPE sheet waterproofing project" loading="lazy" decoding="async" src="assets/membrane-waterproofing-project.webp"/>
-<div class="slide-overlay"><span class="slide-kicker">HDPE SHEET WATERPROOFING</span><h2>Hdpe Sheet Waterproofing</h2><p>HDPE sheet waterproofing work at the project site.</p><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
+<img alt="Brick Bat Coba terrace waterproofing work" loading="lazy" src="assets/brick-bat-coba-work-in-progress.png"/><div class="slide-overlay"><span class="slide-kicker">TERRACE SYSTEM · BRICK BAT COBA</span><h2>Brick Bat Coba Work</h2><p>Terrace work planned with slope, drainage and surface preparation in mind.</p><div class="slide-highlights"><span>✓ Slope &amp; drainage focus</span><span>✓ Traditional terrace method</span></div><a class="slide-quote" href="#contact">Discuss This Work <span aria-hidden="true">→</span></a></div>
 </article>
 <button aria-label="Previous banner" class="slider-arrow prev" id="heroPrev" type="button">‹</button><button aria-label="Next banner" class="slider-arrow next" id="heroNext" type="button">›</button>
-<div aria-label="Choose banner" class="slider-dots" id="heroDots"><button aria-label="Banner 1" class="slider-dot active"></button><button aria-label="Banner 2" class="slider-dot"></button><button aria-label="Banner 3" class="slider-dot"></button><button aria-label="Banner 4" class="slider-dot"></button><button aria-label="Banner 5" class="slider-dot"></button><button aria-label="Banner 6" class="slider-dot"></button></div></div>
+<div aria-label="Choose banner" class="slider-dots" id="heroDots"><button aria-label="Banner 1" class="slider-dot active"></button><button aria-label="Banner 2" class="slider-dot"></button><button aria-label="Banner 3" class="slider-dot"></button><button aria-label="Banner 4" class="slider-dot"></button><button aria-label="Banner 5" class="slider-dot"></button><button aria-label="Banner 6" class="slider-dot"></button></div>
+</div>
 </section>
 <section class="all-types"><div class="wrap"><div><strong>We Undertake All Types of Waterproofing Work</strong><p>Residential • Commercial • Industrial | Roofs, terraces, bathrooms, walls, basements, tanks and more.</p></div><a class="btn cyan" href="services.html">See All Services →</a></div></section>
 <section class="services" id="services">
 <div class="wrap">
 <div class="section-head"><span class="kicker">What we do</span><h2>Waterproofing services</h2><p>Every building and leakage problem is different. Explore our services below; the final treatment should be selected after considering the source of water, surface condition, exposure and project requirements.</p></div>
 <div class="cards">
-<article class="service-card"><img alt="Roof and  Terrace Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/roof-waterproofing-surface-preparation.webp"/><div aria-hidden="true" class="iconbox">⌂</div><h3>Roof &amp; Terrace Waterproofing</h3><p>Roof and terrace surfaces are exposed to rain, standing water, heat and changing weather. Our approach starts with checking the surface, drainage, cracks, joints and any existing coating. Depending on the condition, the work may include cleaning, repairing weak areas, preparing the surface, treating corners and applying a suitable waterproofing system. Proper preparation and drainage detailing are important parts of a dependable roof treatment.</p></article>
-<article class="service-card"><img alt="PU Waterproofing Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/pu-waterproofing-coating.webp"/><div aria-hidden="true" class="iconbox">◈</div><h3>PU Waterproofing Coating</h3><p>Polyurethane (PU) coating can create a continuous protective layer on suitable prepared surfaces. The system is selected according to the substrate, exposure, movement and product instructions. Work may include surface cleaning, repairing defects, primer application, detailing around joints and outlets, and applying the coating at the specified coverage and thickness. The final performance depends on correct preparation, curing and maintenance.</p></article>
-<article class="service-card"><img alt="Water leakage repair reference photo; replace with a dedicated PU injection grouting photo when available" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/ceiling-leakage-repair.webp"/><div aria-hidden="true" class="iconbox">↗</div><h3>PU Injection Grouting</h3><p>PU injection grouting is used for selected active leakage paths in concrete, cracks and construction joints. After assessing where water is entering, suitable injection points are planned and the material is injected using appropriate equipment. Some PU grouts react with moisture and expand to help seal the water path. The right material and method depend on the crack, water pressure and structural condition.</p></article>
-<article class="service-card"><img alt="Real site bathroom waterproofing work in progress" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/bathroom-waterproofing-real-site.webp"/><div aria-hidden="true" class="iconbox">▦</div><h3>Bathroom &amp; Toilet Waterproofing</h3><p>Leakage from bathrooms and toilets may be linked to floor waterproofing, pipe penetrations, wall-floor junctions, tile joints or plumbing defects. The affected area should be assessed before selecting a repair. Depending on the issue, treatment may involve joint sealing, plumbing coordination, removal of damaged finishes or renewing a waterproofing layer before tiles are reinstated. Addressing the source is essential before repairing stains below.</p></article>
-<article class="service-card"><img alt="Brick Bat Coba Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/brick-bat-coba-work-in-progress.webp"/><div aria-hidden="true" class="iconbox">▧</div><h3>Brick Bat Coba Waterproofing</h3><p>Brick Bat Coba is a traditional terrace treatment that uses brick pieces and cement mortar to form a sloped protective layer when suitable for the structure. The work requires attention to the existing slab, levels, rainwater outlets, junctions and curing. A correctly planned slope helps water drain instead of remaining on the roof. The appropriate waterproofing details should be selected according to site conditions and the intended roof finish.</p></article>
-<article class="service-card"><img alt="APP Bitumen Membrane waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/app-bitumen-membrane-waterproofing.webp"/><div aria-hidden="true" class="iconbox">▤</div><h3>APP Bitumen Membrane</h3><p>APP modified bitumen membrane systems are used on suitable roofs and other specified surfaces to provide a waterproofing layer. Reliable installation depends on preparing and priming the substrate, setting out the sheets, forming correct overlaps, and detailing outlets, corners, upstands and penetrations. The membrane type and installation method should match the project specification and safety requirements, especially when torch application is used.</p></article>
-<article class="service-card"><img alt="Basement and  Foundation Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/fosroc-proofex-3000-foundation-waterproofing.webp"/><div aria-hidden="true" class="iconbox">▥</div><h3>Self-Text Membrane Waterproofing</h3><p>After applying the suitable primer, the self-adhesive membrane sheet is carefully laid and bonded to the prepared surface. Proper overlaps and joint sealing help create a continuous waterproofing layer.</p></article>
-<article class="service-card"><img alt="Protective and  Bituminous Roof Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/roof-bituminous-coating-work.webp"/><div aria-hidden="true" class="iconbox">▱</div><h3>Protective &amp; Bituminous Roof Coating</h3><p>Protective roof coatings can help shield compatible surfaces from weather exposure and moisture. The surface must be sound and clean, with cracks, joints and drainage details treated as required by the selected system. The coating is applied according to the manufacturer’s coverage and curing guidance. Coating selection depends on the roof material, existing layers, sunlight exposure and the type of protection required.</p></article>
-<article class="service-card"><img alt="HDPE membrane waterproofing installation" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/membrane-waterproofing-project.webp"/><div aria-hidden="true" class="iconbox">▤</div><h3>HDPE Membrane Waterproofing</h3><p>HDPE (High-Density Polyethylene) membrane waterproofing provides a durable barrier against moisture and water ingress when installed on a properly prepared surface. The system requires suitable surface preparation, correct membrane placement, sealed overlaps and carefully detailed corners and pipe penetrations. A protection layer may be needed before backfilling or covering, depending on the project design.</p></article>
-<article class="service-card"><img alt="Epoxy Flooring and  Floor Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/videos/epoxy-flooring.jpg"/><div aria-hidden="true" class="iconbox">◇</div><h3>Epoxy Flooring &amp; Floor Coating</h3><p>Epoxy floor systems can provide a smooth, hard-wearing finish on suitable concrete floors in homes, commercial areas and industrial spaces. Preparation is critical and may include removing weak material, cleaning, grinding and repairing surface defects. The system is selected according to traffic, moisture and intended use, then mixed and applied within its working time. Curing and site access should follow the product instructions.</p></article>
-<article class="service-card"><img alt="Expansion joint preparation and PU sealant treatment" class="service-photo" decoding="async" loading="lazy" decoding="async" src="assets/roof-joint-waterproofing-treatment.webp"/><div aria-hidden="true" class="iconbox">⌗</div><h3>Expansion Joint Waterproofing</h3><p>Expansion joint cleaning, preparation and PU sealant filling to help seal joints and prevent water entry.</p></article>
+<article class="service-card"><img alt="Roof and  Terrace Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/roof-waterproofing-surface-preparation.png"/><div aria-hidden="true" class="iconbox">⌂</div><h3>Roof &amp; Terrace Waterproofing</h3><p>Roof and terrace surfaces are exposed to rain, standing water, heat and changing weather. Our approach starts with checking the surface, drainage, cracks, joints and any existing coating. Depending on the condition, the work may include cleaning, repairing weak areas, preparing the surface, treating corners and applying a suitable waterproofing system. Proper preparation and drainage detailing are important parts of a dependable roof treatment.</p></article>
+<article class="service-card"><img alt="PU Waterproofing Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/pu-waterproofing-coating.jpg"/><div aria-hidden="true" class="iconbox">◈</div><h3>PU Waterproofing Coating</h3><p>Polyurethane (PU) coating can create a continuous protective layer on suitable prepared surfaces. The system is selected according to the substrate, exposure, movement and product instructions. Work may include surface cleaning, repairing defects, primer application, detailing around joints and outlets, and applying the coating at the specified coverage and thickness. The final performance depends on correct preparation, curing and maintenance.</p></article>
+<article class="service-card"><img alt="Water leakage repair reference photo; replace with a dedicated PU injection grouting photo when available" class="service-photo" decoding="async" loading="lazy" src="assets/ceiling-leakage-repair.png"/><div aria-hidden="true" class="iconbox">↗</div><h3>PU Injection Grouting</h3><p>PU injection grouting is used for selected active leakage paths in concrete, cracks and construction joints. After assessing where water is entering, suitable injection points are planned and the material is injected using appropriate equipment. Some PU grouts react with moisture and expand to help seal the water path. The right material and method depend on the crack, water pressure and structural condition.</p></article>
+<article class="service-card"><img alt="Real site bathroom waterproofing work in progress" class="service-photo" decoding="async" loading="lazy" src="assets/bathroom-waterproofing-real-site.jpg"/><div aria-hidden="true" class="iconbox">▦</div><h3>Bathroom &amp; Toilet Waterproofing</h3><p>Leakage from bathrooms and toilets may be linked to floor waterproofing, pipe penetrations, wall-floor junctions, tile joints or plumbing defects. The affected area should be assessed before selecting a repair. Depending on the issue, treatment may involve joint sealing, plumbing coordination, removal of damaged finishes or renewing a waterproofing layer before tiles are reinstated. Addressing the source is essential before repairing stains below.</p></article>
+<article class="service-card"><img alt="Brick Bat Coba Waterproofing waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/brick-bat-coba-work-in-progress.png"/><div aria-hidden="true" class="iconbox">▧</div><h3>Brick Bat Coba Waterproofing</h3><p>Brick Bat Coba is a traditional terrace treatment that uses brick pieces and cement mortar to form a sloped protective layer when suitable for the structure. The work requires attention to the existing slab, levels, rainwater outlets, junctions and curing. A correctly planned slope helps water drain instead of remaining on the roof. The appropriate waterproofing details should be selected according to site conditions and the intended roof finish.</p></article>
+<article class="service-card"><img alt="APP Bitumen Membrane waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/app-bitumen-membrane-waterproofing.png"/><div aria-hidden="true" class="iconbox">▤</div><h3>APP Bitumen Membrane</h3><p>APP modified bitumen membrane systems are used on suitable roofs and other specified surfaces to provide a waterproofing layer. Reliable installation depends on preparing and priming the substrate, setting out the sheets, forming correct overlaps, and detailing outlets, corners, upstands and penetrations. The membrane type and installation method should match the project specification and safety requirements, especially when torch application is used.</p></article>
+<article class="service-card"><img alt="Self-Text Membrane Waterproofing on a basement wall" class="service-photo" decoding="async" loading="lazy" src="assets/fosroc-proofex-3000-foundation-waterproofing.png"/><div aria-hidden="true" class="iconbox">▥</div><h3>Self-Text Membrane Waterproofing</h3><p>Basement wall waterproofing with surface cleaning, primer application, membrane sheet installation and dimple sheet protection before soil backfilling.</p></article>
+<article class="service-card"><img alt="Protective and  Bituminous Roof Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/roof-bituminous-coating-work.png"/><div aria-hidden="true" class="iconbox">▱</div><h3>Protective &amp; Bituminous Roof Coating</h3><p>Protective roof coatings can help shield compatible surfaces from weather exposure and moisture. The surface must be sound and clean, with cracks, joints and drainage details treated as required by the selected system. The coating is applied according to the manufacturer’s coverage and curing guidance. Coating selection depends on the roof material, existing layers, sunlight exposure and the type of protection required.</p></article>
+<article class="service-card"><img alt="HDPE membrane waterproofing installation" class="service-photo" decoding="async" loading="lazy" src="assets/membrane-waterproofing-project.png"/><div aria-hidden="true" class="iconbox">▤</div><h3>HDPE Membrane Waterproofing</h3><p>HDPE (High-Density Polyethylene) membrane waterproofing provides a durable barrier against moisture and water ingress when installed on a properly prepared surface. The system requires suitable surface preparation, correct membrane placement, sealed overlaps and carefully detailed corners and pipe penetrations. A protection layer may be needed before backfilling or covering, depending on the project design.</p></article>
+<article class="service-card"><img alt="Epoxy Flooring and  Floor Coating waterproofing work" class="service-photo" decoding="async" loading="lazy" src="assets/videos/epoxy-flooring.jpg"/><div aria-hidden="true" class="iconbox">◇</div><h3>Epoxy Flooring &amp; Floor Coating</h3><p>Epoxy floor systems can provide a smooth, hard-wearing finish on suitable concrete floors in homes, commercial areas and industrial spaces. Preparation is critical and may include removing weak material, cleaning, grinding and repairing surface defects. The system is selected according to traffic, moisture and intended use, then mixed and applied within its working time. Curing and site access should follow the product instructions.</p></article>
+<article class="service-card"><img alt="Expansion joint preparation and PU sealant treatment" class="service-photo" decoding="async" loading="lazy" src="assets/roof-joint-waterproofing-treatment.png"/><div aria-hidden="true" class="iconbox">⌗</div><h3>Expansion Joint Treatment</h3><p>Expansion joint cleaning, preparation and PU sealant filling to help prevent water seepage.</p></article>
 </div>
 </div>
 </section>
@@ -694,7 +496,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <div class="video-grid">
 <article class="video-item"><video controls="" playsinline="" poster="assets/videos/roof-surface-preparation.jpg" preload="metadata"><source src="assets/videos/roof-surface-preparation.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>Roof Surface Preparation</strong><p>Surface cleaning and preparation before applying a waterproofing system.</p></div></article>
 <article class="video-item"><video controls="" playsinline="" poster="assets/videos/brick-bat-coba.jpg" preload="metadata"><source src="assets/videos/brick-bat-coba.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>Brick Bat Coba Work</strong><p>Terrace brick-bat laying as part of a roof waterproofing treatment.</p></div></article>
-<article class="video-item"><video controls="" playsinline="" poster="assets/videos/pu-waterproofing-coating.webp" preload="metadata"><source src="assets/videos/pu-waterproofing-coating.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>PU Waterproofing Coating</strong><p>Application of a protective coating over a prepared roof surface.</p></div></article>
+<article class="video-item"><video controls="" playsinline="" poster="assets/videos/pu-waterproofing-coating.jpg" preload="metadata"><source src="assets/videos/pu-waterproofing-coating.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>PU Waterproofing Coating</strong><p>Application of a protective coating over a prepared roof surface.</p></div></article>
 <article class="video-item"><video controls="" playsinline="" poster="assets/videos/epoxy-flooring.jpg" preload="metadata"><source src="assets/videos/epoxy-flooring.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div><strong>Epoxy Flooring Work</strong><p>Floor coating work in an indoor corridor, showing the application process.</p></div></article>
 </div>
 </div>
@@ -702,11 +504,11 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <section class="gallery" id="projects">
 <div class="wrap"><div class="section-head"><span class="kicker">Work gallery</span><h2>Waterproofing project photos</h2><p>Browse photos supplied for the website, showing examples of roof preparation, membrane installation, terrace finishes, joint treatment and protective coating. Each project needs its own inspection and treatment plan.</p></div>
 <div class="photo-carousel"><div class="gallery-grid" id="workGallery">
-<article class="gallery-item"><img alt="Brick bat coba work in progress on a roof terrace" decoding="async" loading="lazy" decoding="async" src="assets/brick-bat-coba-work-in-progress.webp"/><div><strong>Brick Bat Coba – Work in Progress</strong><p>Brick-bat laying and mortar application on a terrace.</p></div></article>
-<article class="gallery-item"><img alt="HDPE membrane waterproofing installation" decoding="async" loading="lazy" decoding="async" src="assets/membrane-waterproofing-project.webp"/><div><strong>HDPE Membrane Waterproofing</strong><p>HDPE membrane sheet installation for reliable waterproofing and structural protection.</p></div></article>
-<article class="gallery-item"><img alt="Waterproofing treatment along a roof joint" decoding="async" loading="lazy" decoding="async" src="assets/roof-joint-waterproofing-treatment.webp"/><div><strong>Roof Joint Treatment</strong><p>Waterproofing detail along a roof joint or vulnerable connection.</p></div></article>
-<article class="gallery-item"><img alt="FOSROC Proofex 3000 membrane on foundation wall" decoding="async" loading="lazy" decoding="async" src="assets/fosroc-proofex-3000-foundation-waterproofing.webp"/><div><strong>Foundation Membrane Waterproofing</strong><p>FOSROC Proofex 3000 membrane shown on a foundation wall and base junction.</p></div></article>
-<article class="gallery-item"><img alt="PU injection grouting work" decoding="async" loading="lazy" decoding="async" src="assets/ceiling-leakage-repair.webp"/><div><strong>PU Injection Grouting</strong><p>PU injection grouting to seal water leakage through cracks and joints.</p></div></article>
+<article class="gallery-item"><img alt="Brick bat coba work in progress on a roof terrace" decoding="async" loading="lazy" src="assets/brick-bat-coba-work-in-progress.png"/><div><strong>Brick Bat Coba – Work in Progress</strong><p>Brick-bat laying and mortar application on a terrace.</p></div></article>
+<article class="gallery-item"><img alt="HDPE sheet membrane waterproofing installation" decoding="async" loading="lazy" src="assets/membrane-waterproofing-project.png"/><div><strong>HDPE Sheet Waterproofing</strong><p>HDPE sheet membrane installation for below-ground waterproofing protection.</p></div></article>
+<article class="gallery-item"><img alt="Waterproofing treatment along a roof joint" decoding="async" loading="lazy" src="assets/roof-joint-waterproofing-treatment.png"/><div><strong>Roof Joint Treatment</strong><p>Waterproofing detail along a roof joint or vulnerable connection.</p></div></article>
+<article class="gallery-item"><img alt="FOSROC Proofex 3000 membrane on foundation wall" decoding="async" loading="lazy" src="assets/fosroc-proofex-3000-foundation-waterproofing.png"/><div><strong>Foundation Membrane Waterproofing</strong><p>FOSROC Proofex 3000 membrane shown on a foundation wall and base junction.</p></div></article>
+
 </div><div class="gallery-controls"><button aria-label="Previous project photo" id="galleryPrev" type="button">‹</button><button aria-label="Next project photo" id="galleryNext" type="button">›</button></div></div>
 </div>
 </section>
@@ -718,7 +520,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <form class="form" id="enquiryForm"><h3 style="margin-top:0">Project enquiry</h3><div class="form-grid">
 <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required=""/></div>
 <div class="field"><label for="phone">Phone number</label><input id="phone" inputmode="tel" name="phone" placeholder="Enter phone number" required=""/></div>
-<div class="field full"><label for="service">Service required</label><select id="service" name="service"><option>Roof / terrace waterproofing</option><option>PU waterproofing coating</option><option>PU injection grouting</option><option>Bathroom leakage</option><option>Crack / joint treatment</option><option>Brick Bat Coba waterproofing</option><option>APP bitumen membrane</option><option>Self-Text Membrane Waterproofing</option><option>Water tank waterproofing</option><option>Epoxy flooring</option><option>Expansion Joint Waterproofing</option><option>Industrial / commercial waterproofing</option><option>Other</option></select></div>
+<div class="field full"><label for="service">Service required</label><select id="service" name="service"><option>Roof / terrace waterproofing</option><option>PU waterproofing coating</option><option>PU injection grouting</option><option>Bathroom leakage</option><option>Wall dampness / seepage</option><option>Crack / joint treatment</option><option>Brick Bat Coba waterproofing</option><option>APP bitumen membrane</option><option>Basement / foundation waterproofing</option><option>Water tank waterproofing</option><option>Epoxy flooring</option><option>Tile joint cutting / PU sealant</option><option>Industrial / commercial waterproofing</option><option>Other</option></select></div>
 <div class="field full"><label for="message">Describe the problem</label><textarea id="message" name="message" placeholder="Where is the leakage? When does it happen?"></textarea></div>
 <div class="field full"><button class="btn" type="submit">Prepare Enquiry Message →</button></div>
 </div><p class="form-note">Submit the form to open WhatsApp with your enquiry message ready to send.</p><div id="formResult" role="status" style="font-size:13px;margin-top:10px;color:#0d3b78"></div></form>
@@ -773,11 +575,149 @@ input:focus,select:focus,textarea:focus{outline:2px solid #1D5FA7!important;bord
 <a href="tel:9888339648" style="display:inline-block;background:#0b3b70;color:white;padding:14px 22px;margin:6px;border-radius:10px;text-decoration:none;font-weight:bold;">📱 Alternate: 9888339648</a>
 </div>
 
+<style id="kushwaha-final-desktop-mobile-slider-fix">
+/* Final responsive fix: use the actual full-width work photo, never blurred side duplicates. */
+.hero-slider{width:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#082b59!important}
+.hero-slides{position:relative!important;display:block!important;width:100%!important;height:clamp(300px,42vw,560px)!important;max-height:560px!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
+.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center center!important;background:transparent!important;filter:none!important;transform:none!important;box-shadow:none!important}
+/* The company poster is already a wide landscape image; show its full design. */
+.hero-slide:first-child>img{object-fit:contain!important;background:#082b59!important}
+.hero-slide:before,.hero-slide:after,.hero-slides:before,.hero-slides:after{display:none!important;content:none!important;filter:none!important;backdrop-filter:none!important}
+.hero-slide .slide-overlay{left:clamp(14px,3.5vw,44px)!important;bottom:clamp(28px,3.5vw,42px)!important;width:min(410px,calc(100% - 88px))!important;max-width:calc(100% - 88px)!important;padding:clamp(12px,1.5vw,18px)!important;border-radius:15px!important;background:linear-gradient(110deg,rgba(5,30,66,.94),rgba(5,49,91,.88))!important;backdrop-filter:none!important;box-shadow:0 8px 22px rgba(0,0,0,.22)!important}
+.hero-slide .slide-overlay h2{font-size:clamp(18px,2.1vw,28px)!important;line-height:1.12!important;margin:0 0 6px!important}
+.hero-slide .slide-overlay p{font-size:clamp(12px,1.25vw,15px)!important;line-height:1.4!important;margin:0 0 10px!important}
+.slider-arrow{z-index:6!important}
+.slider-dots{z-index:6!important;bottom:10px!important}
+@media(max-width:650px){
+ .hero-slides{height:56.25vw!important;max-height:410px!important;min-height:250px!important;aspect-ratio:16/9!important}
+ .hero-slide>img{object-fit:cover!important;object-position:center center!important}
+ .hero-slide:first-child>img{object-fit:contain!important}
+ .hero-slide .slide-overlay{left:12px!important;bottom:30px!important;width:min(310px,calc(100% - 64px))!important;max-width:calc(100% - 64px)!important;padding:11px!important;border-radius:12px!important}
+ .hero-slide .slide-overlay h2{font-size:17px!important;line-height:1.12!important}
+ .hero-slide .slide-overlay p{font-size:11px!important;line-height:1.35!important;margin-bottom:8px!important}
+ .hero-slide .slide-kicker{font-size:9px!important;letter-spacing:1px!important;margin-bottom:5px!important}
+ .hero-slide .slide-highlights{gap:5px!important;margin-bottom:8px!important}
+ .hero-slide .slide-highlights span{font-size:10px!important;padding:5px 7px!important}
+ .hero-slide .slide-quote{font-size:11px!important;padding:8px 11px!important}
+ .slider-arrow{width:34px!important;height:34px!important;font-size:20px!important}
+ .slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}
+ .slider-dots{bottom:7px!important;gap:7px!important}
+}
+</style>
 
-
-
-
-
-
+<style id="final-laptop-wide-mobile-clear-text-fix">
+/* Desktop: use the real photo across the full slider width. No blurred side-fill or empty blue gutters. */
+@media (min-width: 651px) {
+  .hero-slider, .hero-slides, .hero-slide { width:100% !important; }
+  .hero-slides { height:clamp(320px, 42vw, 560px) !important; max-height:560px !important; }
+  .hero-slide>img { width:100% !important; height:100% !important; max-width:none !important; object-fit:cover !important; object-position:center center !important; background:transparent !important; }
+}
+/* Mobile: keep current photo sizing, remove the solid blue panel behind text; keep text readable with shadow. */
+@media (max-width: 650px) {
+  .hero-slide .slide-overlay {
+    background:linear-gradient(180deg, rgba(3,22,43,.25), rgba(3,22,43,.42)) !important;
+    border:1px solid rgba(255,255,255,.28) !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+  }
+  .hero-slide .slide-overlay h2,
+  .hero-slide .slide-overlay p,
+  .hero-slide .slide-kicker,
+  .hero-slide .slide-highlights span { text-shadow:0 2px 5px rgba(0,0,0,.85) !important; }
+}
+</style>
 </body>
 </html>
+
+<style id="premium-slider-overlay-fix">
+/* Premium slider: no blurred duplicate side panels; image remains undistorted. */
+.hero-slider{background:#082b59!important;overflow:hidden!important}
+.hero-slides{width:100%!important;height:clamp(340px,48vw,620px)!important;aspect-ratio:auto!important;max-height:620px!important;min-height:0!important;background:#082b59!important;overflow:hidden!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide img{width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;background:#082b59!important;filter:none!important;transform:none!important}
+.hero-slide:before,.hero-slide:after{display:none!important;content:none!important;filter:none!important}
+.slide-overlay{position:absolute;z-index:3;left:clamp(18px,5vw,64px);bottom:clamp(34px,5vw,58px);width:min(470px,calc(100% - 110px));padding:clamp(14px,2vw,24px);border:1px solid rgba(255,255,255,.3);border-radius:18px;background:linear-gradient(115deg,rgba(5,30,66,.94),rgba(5,49,91,.82));box-shadow:0 12px 32px rgba(0,0,0,.24);color:#fff;backdrop-filter:blur(3px)}
+.slide-kicker{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:800;letter-spacing:1.6px;color:#bfeeff;margin-bottom:7px}
+.slide-overlay h2{margin:0 0 7px;color:#fff;font-size:clamp(19px,2.5vw,32px);line-height:1.13;letter-spacing:-.4px;text-shadow:0 2px 8px rgba(0,0,0,.2)}
+.slide-overlay p{margin:0 0 14px;color:#edf6ff;font-size:clamp(12px,1.3vw,16px);line-height:1.45}
+.slide-quote{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:10px;background:#0a83c2;border:1px solid rgba(255,255,255,.85);color:#fff!important;text-decoration:none;font-size:14px;font-weight:800;box-shadow:0 5px 14px rgba(0,0,0,.18)}
+.slide-quote:hover{background:#086aa0}
+.slider-arrow{z-index:5!important}.slider-dots{z-index:5!important;bottom:12px!important}
+/* The first slide is the branded poster: deliberately no overlay so all poster text remains visible. */
+.hero-slide:first-child .slide-overlay{display:none!important}
+@media(max-width:650px){.hero-slides{height:clamp(300px,68vw,430px)!important;aspect-ratio:auto!important}.slide-overlay{left:12px;bottom:30px;width:min(340px,calc(100% - 72px));padding:12px;border-radius:13px}.slide-overlay h2{font-size:18px}.slide-overlay p{font-size:12px;margin-bottom:10px}.slide-quote{padding:8px 12px;font-size:12px}.slider-dots{bottom:8px!important}}
+</style>
+
+<style id="kushwaha-final-clean-slider-override">
+/* Final override: blur was baked into the original slide image files, so those assets are cleaned; keep a compact 16:9 frame. */
+.hero-slider{position:relative!important;width:100%!important;overflow:hidden!important;background:#082b59!important;margin:0!important;padding:0!important;filter:none!important}
+.hero-slider::before,.hero-slider::after,.hero-slides::before,.hero-slides::after,.hero-slide::before,.hero-slide::after{content:none!important;display:none!important;background-image:none!important;filter:none!important;backdrop-filter:none!important}
+.hero-slides{position:relative!important;width:100%!important;height:clamp(300px,40vw,540px)!important;max-height:540px!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;background:#082b59!important}
+.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#082b59!important;opacity:0;visibility:hidden}
+.hero-slide.active{opacity:1!important;visibility:visible!important;z-index:1!important}
+.hero-slide>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;background:#082b59!important;filter:none!important;transform:none!important;box-shadow:none!important}
+.hero-slide .slide-overlay{position:absolute!important;z-index:3!important;left:clamp(14px,4vw,48px)!important;bottom:clamp(32px,4vw,46px)!important;width:min(430px,calc(100% - 90px))!important;padding:clamp(12px,1.6vw,20px)!important;border:1px solid rgba(255,255,255,.3)!important;border-radius:16px!important;background:linear-gradient(110deg,rgba(5,30,66,.96),rgba(5,49,91,.92))!important;backdrop-filter:none!important;box-shadow:0 10px 26px rgba(0,0,0,.22)!important;color:#fff!important}
+.hero-slide:first-child .slide-overlay{display:none!important}
+.slide-overlay h2{font-size:clamp(18px,2.2vw,29px)!important;line-height:1.12!important;margin:0 0 6px!important}
+.slide-overlay p{font-size:clamp(12px,1.2vw,15px)!important;line-height:1.4!important;margin:0 0 10px!important}
+.slide-quote{padding:9px 14px!important;font-size:13px!important}
+.slider-arrow{z-index:5!important}.slider-dots{z-index:5!important;bottom:10px!important}
+@media(max-width:650px){.hero-slides{height:clamp(300px,68vw,420px)!important;max-height:420px!important}.hero-slide .slide-overlay{left:12px!important;bottom:32px!important;width:min(300px,calc(100% - 66px))!important;padding:11px!important}.slide-overlay h2{font-size:18px!important}.slide-overlay p{font-size:12px!important}.slider-arrow.prev{left:8px!important}.slider-arrow.next{right:8px!important}}
+/* Premium service-card treatment for homepage work slides */
+.hero-slide .slide-overlay{border:1px solid rgba(180,224,255,.58)!important;border-radius:18px!important;background:linear-gradient(135deg,rgba(4,25,58,.97),rgba(7,63,117,.94) 72%,rgba(0,116,177,.92))!important;box-shadow:0 14px 34px rgba(0,15,40,.34),inset 0 1px 0 rgba(255,255,255,.12)!important}
+.hero-slide .slide-kicker{display:inline-block!important;padding:5px 9px!important;border:1px solid rgba(160,222,255,.4)!important;border-radius:999px!important;background:rgba(17,145,205,.18)!important;color:#c7f0ff!important;font-weight:900!important;letter-spacing:1px!important}
+.hero-slide .slide-overlay h2{letter-spacing:-.45px!important;text-wrap:balance!important}
+.hero-slide .slide-overlay p{max-width:42ch!important}
+.slide-highlights{display:flex!important;flex-wrap:wrap!important;gap:6px!important;margin:0 0 13px!important}
+.slide-highlights span{display:inline-flex!important;align-items:center!important;gap:4px!important;padding:5px 8px!important;border-radius:7px!important;background:rgba(255,255,255,.10)!important;border:1px solid rgba(255,255,255,.18)!important;color:#f1f9ff!important;font-size:clamp(10px,.85vw,12px)!important;font-weight:700!important;line-height:1.2!important}
+.hero-slide .slide-quote{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:10px 15px!important;border-radius:10px!important;background:linear-gradient(135deg,#12a5df,#0870b9)!important;color:#fff!important;text-decoration:none!important;font-weight:900!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:0 5px 14px rgba(0,0,0,.18)!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.hero-slide .slide-quote:hover{transform:translateY(-1px)!important;box-shadow:0 8px 18px rgba(0,0,0,.25)!important}
+</style>
+
+<style id="mobile-overlay-visibility-fix">
+/* Mobile-only change: keep the current photo/frame, but make the text card compact so it covers less of the real work photo. */
+@media (max-width: 650px) {
+  .hero-slide .slide-overlay {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 28px !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 9px 11px !important;
+    border-radius: 11px !important;
+    background: rgba(4, 31, 66, .84) !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,.16) !important;
+    backdrop-filter: none !important;
+  }
+  .hero-slide .slide-kicker {
+    font-size: 8px !important;
+    line-height: 1.15 !important;
+    letter-spacing: .7px !important;
+    padding: 3px 7px !important;
+    margin-bottom: 4px !important;
+  }
+  .hero-slide .slide-overlay h2 {
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 4px !important;
+  }
+  .hero-slide .slide-overlay p {
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 6px !important;
+    max-width: 100% !important;
+  }
+  .hero-slide .slide-highlights {
+    display: none !important;
+  }
+  .hero-slide .slide-quote {
+    padding: 6px 9px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    border-radius: 8px !important;
+  }
+  .slider-dots { bottom: 6px !important; }
+}
+</style>
